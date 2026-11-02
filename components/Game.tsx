@@ -284,7 +284,7 @@ export default function Game() {
                 <b>The tell</b>
                 {round.tell.text}
               </p>
-              <div className="sticky-cta" style={{ margin: 0 }}>
+              <div className="sticky-cta" style={{ margin: 0, maxWidth: "none" }}>
                 <button className="btn btn-primary btn-wide" onClick={next} autoFocus>
                   {idx + 1 >= day.rounds.length ? "See your score" : "Next pair"} <span className="kbd">↵</span>
                 </button>

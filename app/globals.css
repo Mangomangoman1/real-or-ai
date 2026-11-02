@@ -425,15 +425,13 @@ a { color: inherit; }
 /* Stamps */
 .stamp {
   position: absolute; z-index: 4;
-  left: 50%; top: 50%;
-  translate: -50% -50%;
   font-family: var(--mono);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-size: clamp(20px, 5.4vw, 30px);
-  padding: 6px 14px 4px;
-  border: 3.5px solid currentColor;
+  font-size: clamp(15px, 3.6vw, 22px);
+  padding: 4px 10px 3px;
+  border: 3px solid currentColor;
   border-radius: 8px;
   white-space: nowrap;
   mix-blend-mode: multiply;
@@ -443,6 +441,10 @@ a { color: inherit; }
 }
 :root[data-theme="dark"] .stamp { mix-blend-mode: normal; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .stamp { mix-blend-mode: normal; } }
+.stamp.at-bl { left: 14px; bottom: 14px; }
+.stamp.at-br { right: 14px; bottom: 14px; }
+.stamp.at-tr { right: 14px; top: 14px; }
+.stamp.at-tl { left: 14px; top: 50px; }
 .stamp small { display: block; font-size: 0.38em; letter-spacing: 0.12em; font-weight: 600; text-align: center; margin-top: 1px; }
 .stamp.ai { color: var(--safelight); background: rgba(255, 245, 240, 0.86); rotate: -9deg; }
 .stamp.real { color: var(--real); background: rgba(244, 252, 246, 0.86); rotate: 6deg; animation-delay: 0.18s; }

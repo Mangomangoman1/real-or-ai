@@ -163,7 +163,7 @@ export default function Frame({ label, src, alt, selected, locked, ready, onLoad
         {tell && <div className="tell-ring" style={{ left: `${tell.x * 100}%`, top: `${tell.y * 100}%` }} />}
 
         {verdict && (
-          <div className={`stamp ${verdict.isAi ? "ai" : "real"}`}>
+          <div className={`stamp ${verdict.isAi ? "ai" : "real"} ${stampCorner(tell || undefined)}`}>
             {verdict.isAi ? "AI" : "Real"}
             <small>{verdict.isAi ? "machine-made" : "photograph"}</small>
           </div>
@@ -194,6 +194,12 @@ export default function Frame({ label, src, alt, selected, locked, ready, onLoad
       </div>
     </div>
   );
+}
+
+/** Put the stamp in the corner farthest from the tell, so it never hides it. */
+function stampCorner(tell?: { x: number; y: number }) {
+  if (!tell) return "at-bl";
+  return `at-${tell.y > 0.5 ? "t" : "b"}${tell.x > 0.5 ? "l" : "r"}`;
 }
 
 function loupeSize() {
