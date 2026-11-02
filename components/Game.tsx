@@ -415,24 +415,6 @@ function End({ no, day, picks, saved, todayNo, onShare, onWeek }: { no: number; 
         <p className="score-line">{LINES[score] ?? ""}</p>
       </div>
 
-      <ul className="recap">
-        {day.rounds.map((r, i) => (
-          <li key={r.id} style={{ animationDelay: `${i * 60}ms` }}>
-            {r.placeholder ? (
-              <span style={{ width: 64, height: 48, borderRadius: 5, background: "var(--paper-2)" }} />
-            ) : (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={r.ai.src} alt="" />
-            )}
-            <div className="what">
-              {capital(r.subject)}
-              <span>{r.tell.text}</span>
-            </div>
-            <span className={`res ${picks[i] ? "hit" : "miss"}`}>{picks[i] ? "spotted" : "fooled"}</span>
-          </li>
-        ))}
-      </ul>
-
       <div className="actions-row">
         <button className="btn btn-primary" onClick={onShare}>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -463,6 +445,24 @@ function End({ no, day, picks, saved, todayNo, onShare, onWeek }: { no: number; 
           <span>best</span>
         </div>
       </div>
+
+      <ul className="recap">
+        {day.rounds.map((r, i) => (
+          <li key={r.id} style={{ animationDelay: `${i * 60}ms` }}>
+            {r.placeholder ? (
+              <span style={{ width: 64, height: 48, borderRadius: 5, background: "var(--paper-2)" }} />
+            ) : (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={r.ai.src} alt="" />
+            )}
+            <div className="what">
+              {capital(r.subject)}
+              <span>{r.tell.text}</span>
+            </div>
+            <span className={`res ${picks[i] ? "hit" : "miss"}`}>{picks[i] ? "spotted" : "fooled"}</span>
+          </li>
+        ))}
+      </ul>
 
       <p className="next-in">
         Next puzzle in <b>{hh}:{mm}:{ss}</b>
