@@ -1,845 +1,881 @@
 {
- "launch": "2026-11-02",
- "days": [
-  {
-   "no": 1,
-   "rounds": [
+  "launch": "2026-11-02",
+  "days": [
     {
-     "id": "d1r1",
-     "subject": "a red fox in fresh snow",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
+      "no": 1,
+      "rounds": [
+        {
+          "id": "d1r1",
+          "subject": "a red fox in fresh snow",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/b1548316a83b9e62d5af.webp",
+            "credit": {
+              "author": "Paolo800",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volpe_in_inverno.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/522fb3f1beff5e8d4c7d.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Close-up wildlife photograph of a red fox lying low in deep fresh snow, looking straight into the camera with amber eyes. A few snowflakes cling to its face and the fur between its eyes. Its thick winter coat is rusty orange on the head and back, fading to cream and grey on the chest, with black-backed ears standing upright. The fox fills the left and centre of the frame; the background is a smooth, soft pale blue-grey of snow and overcast sky, completely out of focus. Shot with a long telephoto lens at eye level, shallow depth of field, cool soft daylight."
+          },
+          "tell": {
+            "text": "Follow the tail back. It starts right behind the shoulder, so there's no room left for the fox's body and back legs.",
+            "x": 0.64,
+            "y": 0.66
+          }
+        },
+        {
+          "id": "d1r2",
+          "subject": "a bowl of ramen",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/1a727202d2d99879dfd5.webp",
+            "credit": {
+              "author": "Shisma",
+              "license": "CC BY 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ramen_Bowl_2.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/e3c5877e27355f2fe30b.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Close-up food photograph of a white ceramic bowl of ramen on a wooden table, shot from a low angle just above the rim. Two soft-boiled egg halves with jammy deep-orange yolks sit in the front of the bowl. Dark sliced wood-ear mushrooms are piled in the centre, with thin ribbons of leek and green spring onion curling around the edges, and noodles visible under a dark clear broth. The background is a blurred warm brown wall. Natural window light from the side, shallow depth of field so the back of the bowl falls softly out of focus."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d1r3",
+          "subject": "a sandstone canyon",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/b56f3c256713e171333a.webp",
+            "credit": {
+              "author": "Christian David",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cross-bedded_Navajo_Sandstone,_Canyon_Overlook_Trail,_Zion_National_Park,_Utah.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/595283f0fdef3612b4e4.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Landscape photograph looking down into a rugged sandstone canyon in Zion National Park, Utah. Layered cliffs of red, orange and cream Navajo sandstone with clear cross-bedding lines rise on both sides. Scrubby green pines and bushes grow along the ledges and in the canyon floor. A pale rounded peak is visible in the far distance between the canyon walls. Smooth slickrock with curving stripes fills the bottom right foreground. The sky is overcast and soft white, giving even, flat light with no hard shadows. Wide-angle lens, everything sharp from front to back."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d1r4",
+          "subject": "an old pickup truck",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/db83e8c29ecc7c3e0d41.webp",
+            "credit": {
+              "author": "inkknife_2000",
+              "license": "CC BY-SA 2.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Truck_of_Many_Colors,_UT_8-25-12_(15257791381).jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/84915ce5c6b8bdb039a5.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Photograph of an abandoned 1950s pickup truck sitting in a field of tall green and golden grass. The truck's paint is a faded, peeling dark red with patches of white primer and rust showing through, especially on the roof and rounded front fender. The cab and empty cargo bed face to the right, seen from the rear three-quarter angle, with long grass growing up around the wheels so the tyres are hidden. Bright summer daylight, a softly blurred meadow fills the background. Shot at eye level, natural colours, sharp detail in the rust and chipped paint."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d1r5",
+          "subject": "a mountain lake at dawn",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/306938ff8f16f43a1e81.webp",
+            "credit": {
+              "author": "DXR",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_of_First_Vermillion_Lake_and_Mount_Bourgeau_20240821_1.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/fe7dadb48923e3b5367f.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Landscape photograph of a calm mountain lake at dawn in the Canadian Rockies. Pink and peach clouds glow above a row of dark blue mountain peaks on the horizon, with a pale moon high in the soft lavender sky. Dense evergreen forest lines the far shore and a steep wooded hillside rises on the right. The still water in the lower half of the frame reflects the pink clouds and dark trees almost perfectly, with a few reeds near the left edge. Gentle low light, muted colours, tripod-steady and sharp throughout."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
     },
     {
-     "id": "d1r2",
-     "subject": "a bowl of ramen",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
+      "no": 2,
+      "rounds": [
+        {
+          "id": "d2r1",
+          "subject": "a barn owl",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/d16491bdf57be0ce0892.webp",
+            "credit": {
+              "author": "Alun Williams333",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tyto_alba_tylluan_wen.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/09957a4cd8ca23dbb299.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Wildlife photograph of a barn owl perched on the top of a weathered, mossy wooden fence post in the lower left of the frame. The owl's white heart-shaped face is turned to the right in profile, and its back and wings are a mottled golden buff with fine grey and black speckles; its chest is pure white. A single tall feathery reed stem arches above it. The background is a smooth, out-of-focus wash of golden-tan reeds and grass. Soft overcast daylight, long telephoto lens, very shallow depth of field."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d2r2",
+          "subject": "croissants",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/d9ae846c70fe91f7b502.webp",
+            "credit": {
+              "author": "Fredericknoronha",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Croissants_at_Candolim,_Goa.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/2b3a48a78136ece1de77.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Close-up food photograph of a pile of large, glossy butter croissants stacked on a round wooden board in a cafe. The croissants have deep golden-brown, flaky, layered crusts with a shiny glaze and visible rolled ridges; one big croissant sits on top of the others in the centre of the frame. The background is a dim, blurred cafe interior with dark furniture and a glass display case. Warm indoor light from above, slight shine on the pastry, shallow depth of field, shot at table height from slightly above."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d2r3",
+          "subject": "a lighthouse at sea",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/44f8ecc97002018ea65e.webp",
+            "credit": {
+              "author": "Gordon Leggett",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:2016-11-13_01_Kjeungskj%C3%A6r_Lighthouse,_S%C3%B8r-Tr%C3%B8ndelag,_Norway.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/c7b51c99e232ed6cd7ea.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Landscape photograph of a tall red-orange wooden lighthouse building standing alone on a tiny rocky islet in a calm blue fjord in Norway. The octagonal lighthouse has white-framed windows, a small red lantern room on top with a railing, and a low red outbuilding and wooden pier attached to its base. Low evening sun lights the right side of the tower warmly. Behind it is a long low island on the horizon and a blue sky with large soft white and grey clouds. Telephoto lens, sea fills the bottom third with gentle ripples."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d2r4",
+          "subject": "a vintage typewriter",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/a5de64e730d803cad2f8.webp",
+            "credit": {
+              "author": "Suyash Dwivedi",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Olivetti_Lettera_82_portable_mechanical_typewriter.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/d71b79888faaa3952dd0.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Photograph of a bright mustard-yellow Olivetti Lettera 82 portable typewriter sitting on a wooden stand at a flea market stall, seen from the front and slightly above. It has round white keys with black letters in a QWERTY layout, a long white space bar and the brand name in small black lettering on the front plate. Old books with gold lettering on their spines lean against its left side, and a jumble of vintage objects and a framed picture fill the blurred background. Natural indoor light, realistic wear and dust on the plastic."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d2r5",
+          "subject": "a wheat field at sunset",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/4f5a1c2e8f362ec77037.webp",
+            "credit": {
+              "author": "Dreamy Pixel",
+              "license": "CC BY 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sunset-over-the-wheat-field-featured.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/12914a4a0d32dcb51cdc.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Landscape photograph of a golden wheat field at sunset, shot low among the stalks. Ripe ears of wheat with long whiskery awns fill the lower two thirds of the frame, the nearest ones sharp and the rest softening into the distance. A small bright sun sits just above a hazy line of blue-grey hills in the upper centre, and the sky is a smooth gradient of warm orange to pale peach. Backlit, the wheat glows amber and brown with rim light on every awn. Telephoto lens, shallow depth of field."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
     },
     {
-     "id": "d1r3",
-     "subject": "a sandstone slot canyon",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
+      "no": 3,
+      "rounds": [
+        {
+          "id": "d3r1",
+          "subject": "a hummingbird at a flower",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/50c5a8c34b6f011058f2.webp",
+            "credit": {
+              "author": "Charles J. Sharp",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cinnamon_hummingbird_(Amazilia_rutila)_in_flight_Los_Tarrales.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/1c9527594f7cfd52f6aa.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Wildlife photograph of a cinnamon hummingbird hovering in mid-air, feeding from a small purple verbena flower on a thin vertical green stem at the left of the frame. Its long straight dark bill touches the flower; its head and back are shiny bronze-green and its throat, chest and belly are a warm rusty cinnamon orange. One wing is raised high and sharp, showing dark grey-brown feathers, and its rufous tail is fanned below. The background is a smooth blur of soft olive green and grey foliage. Fast shutter speed, natural daylight."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d3r2",
+          "subject": "salmon nigiri",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/6901d629fdc8ce5cbf77.webp",
+            "credit": {
+              "author": "Tim Reckmann from Hamm, Deutschland",
+              "license": "CC BY 2.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nigiri_Sushi_(25966163204).jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/1ab6a929c680caca4aa2.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Studio food photograph of a single piece of salmon nigiri sushi on a plain white background. A thick, glossy slice of raw salmon, bright orange with pale white fat lines curving across it, drapes over an oval mound of white sushi rice, with individual rice grains clearly visible. The sushi is seen from a low three-quarter angle, filling most of the frame, with a soft shadow beneath it. Soft, even studio lighting, very sharp detail on the fish texture, clean white background with no other objects."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d3r3",
+          "subject": "colourful canal houses",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/60121eafd316339e2e5b.webp",
+            "credit": {
+              "author": "Jorge Franganillo",
+              "license": "CC BY 2.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Burano_-_canal_and_colourful_houses_(36071932225).jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/92804495bc51b4ddb87f.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Street photograph of a quiet canal on the island of Burano near Venice on a sunny day. A row of narrow two- and three-storey houses painted in bold colours, mustard yellow, bright green, red, lilac, blue and pink, with dark green shutters, runs from the right foreground into the distance along a paved walkway. A red-and-white striped awning shades a small cafe with a chalkboard sign. Small turquoise and blue motorboats are moored along the still green canal on the left. Blue sky with scattered white clouds, wide-angle lens, crisp midday light."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d3r4",
+          "subject": "a bicycle against a wall",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/f908989f679bfbeec0bc.webp",
+            "credit": {
+              "author": "Wilfredor",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blue_bicycle_against_a_brick_wall,_Quebec_City.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/be141444391efd50356a.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Street photograph of a blue women's city bicycle with a step-through frame parked against a weathered red brick wall on a pale concrete sidewalk. A white wire basket is mounted on the rear rack and a black saddle sits above it. The bottom of the wall is a band of grey textured stucco, a grey metal pole runs vertically behind the front wheel, and part of a white-framed window is visible at the top right. Bicycle seen exactly side-on. Soft overcast daylight, natural colours, sharp detail in the bricks and spokes."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d3r5",
+          "subject": "a waterfall in a forest",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/e6608c56b45819b7eb67.webp",
+            "credit": {
+              "author": "Dietmar Rabich",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Beech_Forest_(AU),_Great_Otway_National_Park,_Beauchamp_Falls_--_2019_--_1271.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/17de4df3571541e7a93a.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Landscape photograph of a tall, narrow waterfall dropping in two tiers over a dark mossy rock face in a lush temperate rainforest. Silky white water from a long exposure falls into a shallow pool. Tree ferns and dense green ferns frame the scene on both sides and overhang the top. A fallen log lies across the base of the falls, and the foreground is a shallow creek full of round boulders covered in bright green moss. Soft, even overcast light, deep shade, tripod shot with everything sharp."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
     },
     {
-     "id": "d1r4",
-     "subject": "an old pickup truck",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
+      "no": 4,
+      "rounds": [
+        {
+          "id": "d4r1",
+          "subject": "a tiger in tall grass",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/03442b43578426c8ce0b.webp",
+            "credit": {
+              "author": "Charles J. Sharp",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bengal_tiger_(Panthera_tigris_tigris)_female_3.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/e9d1fcc918211fe37247.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Wildlife photograph of a young Bengal tiger walking from right to left through green grass at the edge of a forest. The tiger is seen fully side-on, head slightly turned towards the camera, with a bright orange coat, bold black stripes, white patches on its face and belly, and a long striped tail curling up at the end. Behind it is a dense wall of leafy green bushes and saplings. Soft daylight, natural colours, telephoto lens at eye level, the tiger sharp and the background slightly soft."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d4r2",
+          "subject": "a wood-fired pizza",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/9df42bde2b7bdf9b11f2.webp",
+            "credit": {
+              "author": "Mario56",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Margherita_Originale.JPG",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/9771a4f41acc81b323b1.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Food photograph of a whole Neapolitan pizza margherita seen from directly above, sitting on a round wooden board. The crust has a puffy, uneven rim with dark blistered char spots from a wood-fired oven. Bright red tomato sauce is spread unevenly, with five irregular pools of melted white fresh mozzarella and scattered whole fresh basil leaves, some slightly wilted from the heat. A dark granite countertop is visible at the top corners. Warm indoor light with a little flash glare, slightly saturated colours like a casual home photo."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d4r3",
+          "subject": "desert sand dunes",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/264ae42e24ad13dea4c6.webp",
+            "credit": {
+              "author": "Meshari Alawfi",
+              "license": "CC BY 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sand_Dunes_sa.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/1e588d2c950124380375.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Landscape photograph of a tall orange sand dune in a desert under a pale blue sky with thin wispy white clouds. The dune's sharp curving crest runs from the lower left up to the centre of the frame, with one side in soft shadow and the sunlit side covered in fine, regular wind ripples that fill the foreground. Flatter dunes and a hazy horizon stretch away to the right. Warm low late-afternoon light, wide-angle lens, deep focus, natural muted colours."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d4r4",
+          "subject": "an espresso",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/2367e3144383d0ac8930.webp",
+            "credit": {
+              "author": "Kritzolina",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cup_of_espresso_02.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/e55f19df829a3382f98e.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Photograph taken from directly above of an espresso in a white porcelain cup on a black saucer, resting on a weathered light wooden table with visible grain and cracks. The espresso has a smooth golden-brown crema. A small metal spoon lies on the saucer on the right, next to two individually wrapped sugar sachets and a wrapped chocolate, orange and yellow, with small printed brand text. Natural daylight from a window, soft shadows, casual cafe snapshot."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d4r5",
+          "subject": "an autumn forest road",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/e6616dd053d2a6da9e15.webp",
+            "credit": {
+              "author": "Ximonic (Simo Räsänen)",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:National_road_970_and_river_Teno_near_Gistugurra,_Utsjoki,_Lapland,_Finland,_2021_September.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/69a0de089d04f54be653.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Landscape photograph of an empty two-lane asphalt road with white edge lines winding down a hillside in Finnish Lapland in autumn. A metal guardrail runs along the right side as the road curves left into the distance. Low birch forest covers the rolling hills in bright yellow, orange and rust-coloured leaves. A calm blue-grey river winds through the valley in the middle of the frame, with rounded fells behind. Heavy grey overcast sky. Shot from the road surface at eye level, wide angle, sharp throughout."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
     },
     {
-     "id": "d1r5",
-     "subject": "a mountain lake at dawn",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
+      "no": 5,
+      "rounds": [
+        {
+          "id": "d5r1",
+          "subject": "a honeybee on a flower",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/030d4e9e99577ad2e764.webp",
+            "credit": {
+              "author": "Ввласенко",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Honey_bee_(%C3%81pis_mellif%C3%A9ra)_on_quince_(Cyd%C5%8Dnia)_flower.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/a8fef4c189256bda42d9.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Macro photograph of a honeybee foraging inside an open pale pink and white quince blossom in spring. The bee sits in the centre of the five rounded petals among yellow stamens, its fuzzy golden-brown thorax and striped abdomen sharply in focus, translucent wings folded back. To the right are tight pink flower buds on a short branch, surrounded by fresh, broad green leaves. The background is a soft dark green blur with a hint of pink blossom in the top corner. Natural daylight, shallow depth of field."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d5r2",
+          "subject": "a bowl of strawberries",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/0de87c2fdf3a3b054391.webp",
+            "credit": {
+              "author": "Hayan Alhasan",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bowl_of_fresh_strawberries_on_a_tray.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/e2926923c056ce843b23.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Close-up photograph of a heap of large, glossy, ripe red strawberries with green leafy tops piled in a cut-glass crystal bowl. The bowl stands on a white plastic serving tray printed with a pale floral pattern in green and pink. Seen from slightly above at a three-quarter angle, the strawberries fill most of the frame, with visible seeds and small highlights from daylight. A casual home snapshot with natural window light and a slightly cluttered patterned tablecloth at the top edge."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d5r3",
+          "subject": "a snowy log cabin",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/797d236595f8471b3959.webp",
+            "credit": {
+              "author": "Benjamin D. Esham (bdesham)",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cabin_at_Allegany_State_Park.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/8f28e4fd869947a3f0c9.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Winter photograph of a small dark green wooden cabin with a low gable roof heavily covered in snow, standing in a bare winter forest. Long icicles hang from the roof edge over a small screened porch on the right side. Three small windows face the front. Deep, smooth snow fills the foreground with a few footprints, and thin grey tree trunks crowd the background. Light snow is falling, visible as small specks against the dark porch. Flat, cold overcast light, muted colours."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d5r4",
+          "subject": "a record player",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/e0997cc3d5fe561640a2.webp",
+            "credit": {
+              "author": "R. Henrik Nilsson",
+              "license": "CC BY 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ca_1964_Bang_Olufsen_Beogram_42V_record_player_Denmark.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/ac5aa5706ebacde8efd8.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Photograph of a 1960s Danish record player with a teak wooden base and silver-grey top plate, set outdoors on a weathered wooden table, seen from the front at table height. A pale ribbed rubber platter mat, a slim chrome tonearm on the right and a raised clear smoked plastic dust cover reflecting tall pine trees and blue sky with clouds. A wooden fence, a building and pine trees fill the background. Bright natural daylight, sharp detail."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d5r5",
+          "subject": "the Milky Way over mountains",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/5685675f2c02e67c200e.webp",
+            "credit": {
+              "author": "John Badham",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Llyn_Ogwen_Milky_Way.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/435a1cd6818cfa4043cb.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Night landscape photograph of the Milky Way arching across a starry sky above a mountain lake in Snowdonia, Wales. Dark rugged mountains rise on both sides, with a warm orange glow of distant town light on the horizon between them. A lone bare tree and a small stone boathouse with a slate roof stand on the near shore. The still lake reflects the glow and the tree. Large rocks and a small conifer in the dark foreground. Long exposure, wide-angle lens, fine grain, thousands of sharp stars."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "rounds": [
+        {
+          "id": "d6r1",
+          "subject": "a moon jellyfish",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/f8dc3bb2d8d45e9f4d44.webp",
+            "credit": {
+              "author": "W.carter",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Moon_jellyfish_in_R%C3%A5g%C3%A5rdsdal_4.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/b1e5fb28a0aeb9145572.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Underwater photograph of a single moon jellyfish drifting in deep teal-green sea water. Its translucent, saucer-shaped bell glows pale blue and violet, tilted to show the four horseshoe-shaped gonads in the centre, with a fringe of fine short tentacles around the edge and frilly oral arms folded underneath. The water fades from lighter green at the top to darker blue-green at the bottom with tiny floating particles. Lit by a soft underwater flash, the jellyfish is sharp against the soft background."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d6r2",
+          "subject": "a cheeseburger",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/699291457e95c3f635a5.webp",
+            "credit": {
+              "author": "Kurtkaiser",
+              "license": "CC0",
+              "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cheeseburger_and_fries_4.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/98a75b0b93a8e89f48f2.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Casual overhead photograph of a cheeseburger and a large pile of skin-on fries on a crumpled sheet of brown paper in a metal tray on a restaurant table. The burger has a shiny brown brioche bun, melted cheese, a thick beef patty, fresh rocket and green salad leaves and crispy fried onion strings on top. The fries are long, uneven and golden with dark crispy ends. A paper menu is partly visible at the top left. Warm restaurant lighting, slightly underexposed phone snapshot."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d6r3",
+          "subject": "rice terraces",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/bdc33226fac7b7d701d3.webp",
+            "credit": {
+              "author": "Vyacheslav Argenberg",
+              "license": "CC BY 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rice_terraces,_Bali.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/32b921f202d7dc9432d7.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Landscape photograph of green rice terraces in Bali, Indonesia, stepping down a steep valley side in curving layers. The terraces are bright fresh green, separated by narrow earthen walls. Tall coconut palms with feathery fronds stand scattered across the slopes and fill the foreground with dense tropical banana plants and bushes. A dark forested ridge closes the top of the frame with no sky visible. Soft, humid, overcast daylight, rich saturated greens, telephoto compression."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d6r4",
+          "subject": "an antique pocket watch",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/5284baf067e87c972369.webp",
+            "credit": {
+              "author": "Dietmar Rabich",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:D%C3%BClmen,_Kirchspiel,_ehem._Sondermunitionslager_Visbeck,_%22What_if%22_--_2023_--_6727.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/f04855a504fa1bc6a15c.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Photograph of an antique silver pocket watch standing upright on a weathered grey concrete ledge next to a galvanised metal post. The watch has a round brass bow at the top, a white enamel dial with black Roman numerals, thin black hands, a small seconds sub-dial and visible scratches and tarnish on the case. A small rusty bolt sits just behind it on the left. The background on the left is a soft, blurred pale grey. Overcast daylight, shallow depth of field, close-up at ledge height."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d6r5",
+          "subject": "ice bubbles in a frozen lake",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/056a3705cd27b6a9e71a.webp",
+            "credit": {
+              "author": "Joli Rumi",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ice_bubble_formation_at_Abraham_Lake.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/1a231dac93e2965be665.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Landscape photograph of frozen methane bubbles trapped in clear dark ice on Abraham Lake in the Canadian Rockies. The foreground is filled with stacked white, round and oval bubbles suspended at different depths in the glassy grey-green ice, with fine cracks and a few patches of dusting snow. The ice stretches to a dark forested shoreline and jagged snow-covered mountains under a bright, cloudy sky, with the low sun reflecting as a soft glare on the ice at the right. Wide-angle lens, low viewpoint, cold natural colours."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "rounds": [
+        {
+          "id": "d7r1",
+          "subject": "an Atlantic puffin",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/7539c4b13da46745976b.webp",
+            "credit": {
+              "author": "Charles J. Sharp",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Puffin_(Fratercula_arctica)_with_lesser_sand_eels_(Ammodytes_tobianus).jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/9c3bd2641ac52ce7d11e.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Wildlife photograph of an Atlantic puffin standing on a grassy clifftop holding a beakful of shiny silver sand eels hanging from its colourful orange, yellow and blue-grey bill. The bird is in side view facing right, with a black back and wings, a white chest, a pale grey face and bright orange feet on a patch of bare brown earth. Green cushions of sea campion and short grass with a few tiny white flowers fill the scene. Overcast daylight, telephoto lens, sharp detail on feathers and fish."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d7r2",
+          "subject": "a plate of macarons",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/af354b7349f6357d9d62.webp",
+            "credit": {
+              "author": "Shisma",
+              "license": "CC0",
+              "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:French_macaroons.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/df4c89c0399ef0ab1e31.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Casual photograph of four pale beige French macarons with a caramel filling on a small round cream-coloured plate on a light oak table in a cafe. Three macarons sit flat and one leans on top of the others; their smooth tops and ruffled feet are clearly visible. Behind them, out of focus, are a white bowl, a mug and part of another plate of pastries. Warm indoor light from a window on the right, shallow depth of field, shot at table height."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d7r3",
+          "subject": "a tram on a city street",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/31de4c243d2463e00e9f.webp",
+            "credit": {
+              "author": "George Chernilevsky",
+              "license": "Public domain",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tram_Be_4_6_Mirage_Vinnitsa_2009_G1.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/a7d79644e108b7105e6f.webp",
+            "model": "Seedream 5.0 Lite",
+            "prompt": "Street photograph of a long blue-and-white articulated city tram stopped on a wide, quiet asphalt street on a sunny spring day. The tram has a pale blue lower body, white upper band, large windows, a pantograph on the roof touching overhead wires and a route number 4 sign on its front. Tall trees with fresh light green leaves line the far side of the street, with a low building and a parked red car in the background. Seen from a three-quarter front angle. Clear blue sky, crisp midday light."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "id": "d7r4",
+          "subject": "a pine cone",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/0c3d5942c47db8c47385.webp",
+            "credit": {
+              "author": "Vyacheslav Argenberg",
+              "license": "CC BY 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ergaki,_Siberian_pine_cone_with_seeds_and_foliage,_Pinus_sibirica,_Sayan_Mountains,_Russia.jpg",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "",
+            "model": "pending",
+            "prompt": "Close-up nature photograph of a single mature Siberian pine cone hanging on a branch among long, soft green needles in a mountain forest. The egg-shaped cone is purple-brown with thick, overlapping woody scales that have pale grey edges and a slight resin shine. Bunches of five-needle clusters radiate around it in every direction, some in front of the cone. A smaller young reddish cone sits above it at the top of the branch. The background is a soft blur of dark forest. Natural overcast light, shallow depth of field."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "placeholder": true
+        },
+        {
+          "id": "d7r5",
+          "subject": "an iceberg",
+          "real": {
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/07069e9c181671bebddb.webp",
+            "credit": {
+              "author": "Luca Galuzzi (Lucag)",
+              "license": "CC BY-SA 2.5",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:T%C3%A8mpanos_(iceberg)_Lago_Argentino_Brazo_Norte_Patagonia_Argentina_Luca_Galuzzi_2005.JPG",
+              "sourceName": "Wikimedia Commons"
+            }
+          },
+          "ai": {
+            "src": "",
+            "model": "pending",
+            "prompt": "Landscape photograph of a large, jagged iceberg floating in a glacial lake in Patagonia. The ice glows an intense translucent turquoise blue, with sharp sculpted peaks and smooth melted hollows, and whiter ice along the top edges. The lake surface in front is calm pale blue-grey. Behind the iceberg rise dark forested hills and snow-dusted mountains, under a blue sky with thin streaks of white cloud. Bright, clear afternoon light, sharp detail in the ice texture."
+          },
+          "tell": {
+            "text": "Tell pending.",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "placeholder": true
+        }
+      ]
     }
-   ]
-  },
-  {
-   "no": 2,
-   "rounds": [
-    {
-     "id": "d2r1",
-     "subject": "a barn owl",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d2r2",
-     "subject": "croissants on a tray",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d2r3",
-     "subject": "a lighthouse on a rocky coast",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d2r4",
-     "subject": "a vintage typewriter",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d2r5",
-     "subject": "a wheat field at sunset",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    }
-   ]
-  },
-  {
-   "no": 3,
-   "rounds": [
-    {
-     "id": "d3r1",
-     "subject": "a hummingbird at a flower",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d3r2",
-     "subject": "a plate of sushi",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d3r3",
-     "subject": "an empty canal in Venice",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d3r4",
-     "subject": "a bicycle against a wall",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d3r5",
-     "subject": "a waterfall in a forest",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    }
-   ]
-  },
-  {
-   "no": 4,
-   "rounds": [
-    {
-     "id": "d4r1",
-     "subject": "a tiger in tall grass",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d4r2",
-     "subject": "a wood-fired pizza",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d4r3",
-     "subject": "desert sand dunes",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d4r4",
-     "subject": "an espresso cup",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d4r5",
-     "subject": "an autumn forest road",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    }
-   ]
-  },
-  {
-   "no": 5,
-   "rounds": [
-    {
-     "id": "d5r1",
-     "subject": "a honeybee on a flower",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d5r2",
-     "subject": "a bowl of strawberries",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d5r3",
-     "subject": "a snowy log cabin",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d5r4",
-     "subject": "a record player",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d5r5",
-     "subject": "the Milky Way over mountains",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    }
-   ]
-  },
-  {
-   "no": 6,
-   "rounds": [
-    {
-     "id": "d6r1",
-     "subject": "a moon jellyfish",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d6r2",
-     "subject": "a cheeseburger",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d6r3",
-     "subject": "rice terraces",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d6r4",
-     "subject": "an antique pocket watch",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d6r5",
-     "subject": "ice bubbles in a frozen lake",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    }
-   ]
-  },
-  {
-   "no": 7,
-   "rounds": [
-    {
-     "id": "d7r1",
-     "subject": "an Atlantic puffin",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d7r2",
-     "subject": "a stack of macarons",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d7r3",
-     "subject": "a tram on a city street",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d7r4",
-     "subject": "a pine cone",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    },
-    {
-     "id": "d7r5",
-     "subject": "an iceberg",
-     "placeholder": true,
-     "real": {
-      "src": "",
-      "credit": {
-       "author": "",
-       "license": "",
-       "sourceUrl": "",
-       "sourceName": "Wikimedia Commons"
-      }
-     },
-     "ai": {
-      "src": "",
-      "model": "pending"
-     },
-     "tell": {
-      "text": "Tell goes here once the AI twin is made.",
-      "x": 0.5,
-      "y": 0.5
-     }
-    }
-   ]
-  }
- ]
+  ]
 }
