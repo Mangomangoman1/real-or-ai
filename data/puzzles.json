@@ -839,16 +839,15 @@
             }
           },
           "ai": {
-            "src": "",
-            "model": "pending",
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/d19dbc7b1d91724d4774.webp",
+            "model": "Seedream 5.0 Lite",
             "prompt": "Close-up nature photograph of a single mature Siberian pine cone hanging on a branch among long, soft green needles in a mountain forest. The egg-shaped cone is purple-brown with thick, overlapping woody scales that have pale grey edges and a slight resin shine. Bunches of five-needle clusters radiate around it in every direction, some in front of the cone. A smaller young reddish cone sits above it at the top of the branch. The background is a soft blur of dark forest. Natural overcast light, shallow depth of field."
           },
           "tell": {
             "text": "Tell pending.",
             "x": 0.5,
             "y": 0.5
-          },
-          "placeholder": true
+          }
         },
         {
           "id": "d7r5",
@@ -864,16 +863,15 @@
             }
           },
           "ai": {
-            "src": "",
-            "model": "pending",
+            "src": "https://hlpvosalf6tojyv9.public.blob.vercel-storage.com/m/8d9634049c4aeb8ad11a.webp",
+            "model": "Seedream 5.0 Lite",
             "prompt": "Landscape photograph of a large, jagged iceberg floating in a glacial lake in Patagonia. The ice glows an intense translucent turquoise blue, with sharp sculpted peaks and smooth melted hollows, and whiter ice along the top edges. The lake surface in front is calm pale blue-grey. Behind the iceberg rise dark forested hills and snow-dusted mountains, under a blue sky with thin streaks of white cloud. Bright, clear afternoon light, sharp detail in the ice texture."
           },
           "tell": {
             "text": "Tell pending.",
             "x": 0.5,
             "y": 0.5
-          },
-          "placeholder": true
+          }
         }
       ]
     }
