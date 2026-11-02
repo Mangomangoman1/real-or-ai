@@ -47,6 +47,7 @@ export async function makeAi(item: Src, model = DEFAULT_MODEL) {
     bytes = res.image.uint8Array;
   }
   const buf = await normalise(Buffer.from(bytes));
-  const url = await store(item.id, "ai", buf);
+  // "ai2": the first batch carried a watermark, and a new name dodges year-long CDN caching of the old files.
+  const url = await store(item.id, "ai2", buf);
   return { id: item.id, model, url, bytes: buf.length };
 }

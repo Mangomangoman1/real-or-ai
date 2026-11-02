@@ -19,12 +19,12 @@ export async function normalise(input: Buffer) {
 }
 
 /** Opaque file names, so the URL doesn't say which one is real. */
-export function opaqueName(roundId: string, kind: "real" | "ai") {
+export function opaqueName(roundId: string, kind: string) {
   const salt = process.env.MEDIA_SALT || "roai-salt-v1";
   return "m/" + createHash("sha256").update(`${salt}:${roundId}:${kind}`).digest("hex").slice(0, 20) + ".webp";
 }
 
-export async function store(roundId: string, kind: "real" | "ai", buf: Buffer) {
+export async function store(roundId: string, kind: string, buf: Buffer) {
   const res = await put(opaqueName(roundId, kind), buf, {
     access: "public",
     contentType: "image/webp",
