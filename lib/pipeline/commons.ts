@@ -46,6 +46,7 @@ async function query(params: Record<string, string>) {
     ...params,
   }).forEach(([k, v]) => u.searchParams.set(k, v));
   const r = await fetch(u, { headers: { "User-Agent": UA }, cache: "no-store" });
+  if (!r.ok) throw new Error(`commons ${r.status}`);
   const j = (await r.json()) as { query?: { pages?: Page[] } };
   return (j.query?.pages ?? []).sort((a, b) => (a.index ?? 0) - (b.index ?? 0));
 }

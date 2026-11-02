@@ -11,13 +11,24 @@ export default async function Pick({ searchParams }: { searchParams: Promise<{ q
   if (!pipelineEnabled()) notFound();
   const sp = await searchParams;
   const qs = (sp.q ?? "").split("|").filter(Boolean);
-  const results = await Promise.all(qs.map((q) => search(q, Number(sp.n ?? 6)).catch(() => [])));
+  // One at a time: Commons rate-limits bursts of parallel searches.
+  const results: Awaited<ReturnType<typeof search>>[] = [];
+  const errors: string[] = [];
+  for (const q of qs) {
+    try {
+      results.push(await search(q, Number(sp.n ?? 6)));
+      errors.push("");
+    } catch (e) {
+      results.push([]);
+      errors.push(String(e));
+    }
+  }
   return (
     <main style={{ padding: 6, fontFamily: "system-ui", fontSize: 10, background: "#fff", color: "#000" }}>
       {qs.map((q, qi) => (
         <section key={q} style={{ marginBottom: 6 }}>
           <div style={{ fontWeight: 700, fontSize: 12 }}>
-            {qi}: {q}
+            {qi}: {q} <span style={{ color: "#c00" }}>{errors[qi]}</span>
           </div>
           <div style={{ display: "flex", gap: 4 }}>
             {results[qi].map((c, i) => {
