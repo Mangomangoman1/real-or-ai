@@ -1,0 +1,845 @@
+{
+ "launch": "2026-11-02",
+ "days": [
+  {
+   "no": 1,
+   "rounds": [
+    {
+     "id": "d1r1",
+     "subject": "a red fox in fresh snow",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d1r2",
+     "subject": "a bowl of ramen",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d1r3",
+     "subject": "a sandstone slot canyon",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d1r4",
+     "subject": "an old pickup truck",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d1r5",
+     "subject": "a mountain lake at dawn",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "rounds": [
+    {
+     "id": "d2r1",
+     "subject": "a barn owl",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d2r2",
+     "subject": "croissants on a tray",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d2r3",
+     "subject": "a lighthouse on a rocky coast",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d2r4",
+     "subject": "a vintage typewriter",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d2r5",
+     "subject": "a wheat field at sunset",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "rounds": [
+    {
+     "id": "d3r1",
+     "subject": "a hummingbird at a flower",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d3r2",
+     "subject": "a plate of sushi",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d3r3",
+     "subject": "an empty canal in Venice",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d3r4",
+     "subject": "a bicycle against a wall",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d3r5",
+     "subject": "a waterfall in a forest",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "rounds": [
+    {
+     "id": "d4r1",
+     "subject": "a tiger in tall grass",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d4r2",
+     "subject": "a wood-fired pizza",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d4r3",
+     "subject": "desert sand dunes",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d4r4",
+     "subject": "an espresso cup",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d4r5",
+     "subject": "an autumn forest road",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "rounds": [
+    {
+     "id": "d5r1",
+     "subject": "a honeybee on a flower",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d5r2",
+     "subject": "a bowl of strawberries",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d5r3",
+     "subject": "a snowy log cabin",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d5r4",
+     "subject": "a record player",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d5r5",
+     "subject": "the Milky Way over mountains",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "rounds": [
+    {
+     "id": "d6r1",
+     "subject": "a moon jellyfish",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d6r2",
+     "subject": "a cheeseburger",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d6r3",
+     "subject": "rice terraces",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d6r4",
+     "subject": "an antique pocket watch",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d6r5",
+     "subject": "ice bubbles in a frozen lake",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "rounds": [
+    {
+     "id": "d7r1",
+     "subject": "an Atlantic puffin",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d7r2",
+     "subject": "a stack of macarons",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d7r3",
+     "subject": "a tram on a city street",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d7r4",
+     "subject": "a pine cone",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    },
+    {
+     "id": "d7r5",
+     "subject": "an iceberg",
+     "placeholder": true,
+     "real": {
+      "src": "",
+      "credit": {
+       "author": "",
+       "license": "",
+       "sourceUrl": "",
+       "sourceName": "Wikimedia Commons"
+      }
+     },
+     "ai": {
+      "src": "",
+      "model": "pending"
+     },
+     "tell": {
+      "text": "Tell goes here once the AI twin is made.",
+      "x": 0.5,
+      "y": 0.5
+     }
+    }
+   ]
+  }
+ ]
+}
