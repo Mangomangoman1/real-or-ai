@@ -23,9 +23,9 @@
             "prompt": "Close-up wildlife photograph of a red fox lying low in deep fresh snow, looking straight into the camera with amber eyes. A few snowflakes cling to its face and the fur between its eyes. Its thick winter coat is rusty orange on the head and back, fading to cream and grey on the chest, with black-backed ears standing upright. The fox fills the left and centre of the frame; the background is a smooth, soft pale blue-grey of snow and overcast sky, completely out of focus. Shot with a long telephoto lens at eye level, shallow depth of field, cool soft daylight."
           },
           "tell": {
-            "text": "Follow the tail back. It starts right behind the shoulder, so there's no room left for the fox's body and back legs.",
-            "x": 0.64,
-            "y": 0.66
+            "text": "The snow flecks sit on top of the fur like confetti, all the same crisp size, and a few float in mid-air by the whiskers. Real snow clumps and sinks into fur.",
+            "x": 0.45,
+            "y": 0.5
           }
         },
         {
@@ -47,9 +47,9 @@
             "prompt": "Close-up food photograph of a white ceramic bowl of ramen on a wooden table, shot from a low angle just above the rim. Two soft-boiled egg halves with jammy deep-orange yolks sit in the front of the bowl. Dark sliced wood-ear mushrooms are piled in the centre, with thin ribbons of leek and green spring onion curling around the edges, and noodles visible under a dark clear broth. The background is a blurred warm brown wall. Natural window light from the side, shallow depth of field so the back of the bowl falls softly out of focus."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "Look at the leek ribbons on the left: they melt into the noodles with no edge, as if the two were one material. Real sliced leek sits on top with crisp, separate edges.",
+            "x": 0.27,
+            "y": 0.33
           }
         },
         {
@@ -71,9 +71,9 @@
             "prompt": "Landscape photograph looking down into a rugged sandstone canyon in Zion National Park, Utah. Layered cliffs of red, orange and cream Navajo sandstone with clear cross-bedding lines rise on both sides. Scrubby green pines and bushes grow along the ledges and in the canyon floor. A pale rounded peak is visible in the far distance between the canyon walls. Smooth slickrock with curving stripes fills the bottom right foreground. The sky is overcast and soft white, giving even, flat light with no hard shadows. Wide-angle lens, everything sharp from front to back."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "The rock in the foreground has perfectly parallel stripes, like candy painted on. Real sandstone layers wander, cross and break.",
+            "x": 0.62,
+            "y": 0.75
           }
         },
         {
@@ -95,9 +95,9 @@
             "prompt": "Photograph of an abandoned 1950s pickup truck sitting in a field of tall green and golden grass. The truck's paint is a faded, peeling dark red with patches of white primer and rust showing through, especially on the roof and rounded front fender. The cab and empty cargo bed face to the right, seen from the rear three-quarter angle, with long grass growing up around the wheels so the tyres are hidden. Bright summer daylight, a softly blurred meadow fills the background. Shot at eye level, natural colours, sharp detail in the rust and chipped paint."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "The rear fender arches over nothing. There's no wheel under it, just grass, while a stray black tyre shape pokes out under the corner of the bed.",
+            "x": 0.53,
+            "y": 0.75
           }
         },
         {
@@ -119,9 +119,9 @@
             "prompt": "Landscape photograph of a calm mountain lake at dawn in the Canadian Rockies. Pink and peach clouds glow above a row of dark blue mountain peaks on the horizon, with a pale moon high in the soft lavender sky. Dense evergreen forest lines the far shore and a steep wooded hillside rises on the right. The still water in the lower half of the frame reflects the pink clouds and dark trees almost perfectly, with a few reeds near the left edge. Gentle low light, muted colours, tripod-steady and sharp throughout."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "Check the reeds in the bottom left. They don't meet a mirrored copy at the waterline; the stems just carry on down through the reflection, and a dead-straight stick hangs across them in mid-air.",
+            "x": 0.11,
+            "y": 0.9
           }
         }
       ]
@@ -148,9 +148,9 @@
             "prompt": "Wildlife photograph of a barn owl perched on the top of a weathered, mossy wooden fence post in the lower left of the frame. The owl's white heart-shaped face is turned to the right in profile, and its back and wings are a mottled golden buff with fine grey and black speckles; its chest is pure white. A single tall feathery reed stem arches above it. The background is a smooth, out-of-focus wash of golden-tan reeds and grass. Soft overcast daylight, long telephoto lens, very shallow depth of field."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "The face can't decide which way it's pointing. You see the whole heart-shaped disc as if from the front, yet the beak points sideways in profile, with one eye stuck on the cheek.",
+            "x": 0.39,
+            "y": 0.38
           }
         },
         {
@@ -172,9 +172,9 @@
             "prompt": "Close-up food photograph of a pile of large, glossy butter croissants stacked on a round wooden board in a cafe. The croissants have deep golden-brown, flaky, layered crusts with a shiny glaze and visible rolled ridges; one big croissant sits on top of the others in the centre of the frame. The background is a dim, blurred cafe interior with dark furniture and a glass display case. Warm indoor light from above, slight shine on the pastry, shallow depth of field, shot at table height from slightly above."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "The pastry is scored with hundreds of thin, hair-like stripes, like brush strokes. A real croissant shows a few fat rolled bands with shattered, flaky edges.",
+            "x": 0.42,
+            "y": 0.38
           }
         },
         {
@@ -196,9 +196,9 @@
             "prompt": "Landscape photograph of a tall red-orange wooden lighthouse building standing alone on a tiny rocky islet in a calm blue fjord in Norway. The octagonal lighthouse has white-framed windows, a small red lantern room on top with a railing, and a low red outbuilding and wooden pier attached to its base. Low evening sun lights the right side of the tower warmly. Behind it is a long low island on the horizon and a blue sky with large soft white and grey clouds. Telephoto lens, sea fills the bottom third with gentle ripples."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "There's no way in. The tower has three rows of windows but no door on any side you can see, and the sunny face squashes its windows into narrow slots.",
+            "x": 0.35,
+            "y": 0.74
           }
         },
         {
@@ -220,9 +220,9 @@
             "prompt": "Photograph of a bright mustard-yellow Olivetti Lettera 82 portable typewriter sitting on a wooden stand at a flea market stall, seen from the front and slightly above. It has round white keys with black letters in a QWERTY layout, a long white space bar and the brand name in small black lettering on the front plate. Old books with gold lettering on their spines lean against its left side, and a jumble of vintage objects and a framed picture fill the blurred background. Natural indoor light, realistic wear and dust on the plastic."
           },
           "tell": {
-            "text": "Tell pending.",
+            "text": "Read the keys. The top row goes Q W E T T T U Y, letters repeat or turn into squiggles, and the number row is blank. Real keyboards never misspell themselves.",
             "x": 0.5,
-            "y": 0.5
+            "y": 0.45
           }
         },
         {
@@ -244,9 +244,9 @@
             "prompt": "Landscape photograph of a golden wheat field at sunset, shot low among the stalks. Ripe ears of wheat with long whiskery awns fill the lower two thirds of the frame, the nearest ones sharp and the rest softening into the distance. A small bright sun sits just above a hazy line of blue-grey hills in the upper centre, and the sky is a smooth gradient of warm orange to pale peach. Backlit, the wheat glows amber and brown with rim light on every awn. Telephoto lens, shallow depth of field."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "The sun is right behind the wheat, yet the ears facing you are evenly lit with every grain in detail. Shoot into a real sunset and the near wheat turns to dark silhouettes with glowing edges.",
+            "x": 0.42,
+            "y": 0.65
           }
         }
       ]
@@ -273,9 +273,9 @@
             "prompt": "Wildlife photograph of a cinnamon hummingbird hovering in mid-air, feeding from a small purple verbena flower on a thin vertical green stem at the left of the frame. Its long straight dark bill touches the flower; its head and back are shiny bronze-green and its throat, chest and belly are a warm rusty cinnamon orange. One wing is raised high and sharp, showing dark grey-brown feathers, and its rufous tail is fanned below. The background is a smooth blur of soft olive green and grey foliage. Fast shutter speed, natural daylight."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "The wing sprouts from the middle of the back, well behind the neck. On a real hummingbird it joins right at the shoulder. The tiny foot is also a closed loop, more like a ring than toes.",
+            "x": 0.56,
+            "y": 0.44
           }
         },
         {
@@ -297,9 +297,9 @@
             "prompt": "Studio food photograph of a single piece of salmon nigiri sushi on a plain white background. A thick, glossy slice of raw salmon, bright orange with pale white fat lines curving across it, drapes over an oval mound of white sushi rice, with individual rice grains clearly visible. The sushi is seen from a low three-quarter angle, filling most of the frame, with a soft shadow beneath it. Soft, even studio lighting, very sharp detail on the fish texture, clean white background with no other objects."
           },
           "tell": {
-            "text": "Tell pending.",
+            "text": "The fat lines are evenly spaced stripes laid on top, like a decal. In real salmon they're the edges of muscle layers, curving in chevrons and changing width as they go. The rice grains are oddly huge too.",
             "x": 0.5,
-            "y": 0.5
+            "y": 0.47
           }
         },
         {
@@ -321,9 +321,9 @@
             "prompt": "Street photograph of a quiet canal on the island of Burano near Venice on a sunny day. A row of narrow two- and three-storey houses painted in bold colours, mustard yellow, bright green, red, lilac, blue and pink, with dark green shutters, runs from the right foreground into the distance along a paved walkway. A red-and-white striped awning shades a small cafe with a chalkboard sign. Small turquoise and blue motorboats are moored along the still green canal on the left. Blue sky with scattered white clouds, wide-angle lens, crisp midday light."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "The wooden mooring poles are planted in the pavement, not the canal. Boats tie up to poles that stand in the water, a step off the quay.",
+            "x": 0.24,
+            "y": 0.92
           }
         },
         {
@@ -345,9 +345,9 @@
             "prompt": "Street photograph of a blue women's city bicycle with a step-through frame parked against a weathered red brick wall on a pale concrete sidewalk. A white wire basket is mounted on the rear rack and a black saddle sits above it. The bottom of the wall is a band of grey textured stucco, a grey metal pole runs vertically behind the front wheel, and part of a white-framed window is visible at the top right. Bicycle seen exactly side-on. Soft overcast daylight, natural colours, sharp detail in the bricks and spokes."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "There's no chain. The front chainring connects to nothing, so the back wheel could never turn. The frame tubes also melt into each other where they meet by the pedals.",
+            "x": 0.36,
+            "y": 0.86
           }
         },
         {
@@ -369,9 +369,9 @@
             "prompt": "Landscape photograph of a tall, narrow waterfall dropping in two tiers over a dark mossy rock face in a lush temperate rainforest. Silky white water from a long exposure falls into a shallow pool. Tree ferns and dense green ferns frame the scene on both sides and overhang the top. A fallen log lies across the base of the falls, and the foreground is a shallow creek full of round boulders covered in bright green moss. Soft, even overcast light, deep shade, tripod shot with everything sharp."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "Follow the fallen log. Halfway across it turns into a second, bare log angled the other way, with no break or join between them. And the falls hit no pool, just slip behind the log and vanish.",
+            "x": 0.53,
+            "y": 0.92
           }
         }
       ]
@@ -398,9 +398,9 @@
             "prompt": "Wildlife photograph of a young Bengal tiger walking from right to left through green grass at the edge of a forest. The tiger is seen fully side-on, head slightly turned towards the camera, with a bright orange coat, bold black stripes, white patches on its face and belly, and a long striped tail curling up at the end. Behind it is a dense wall of leafy green bushes and saplings. Soft daylight, natural colours, telephoto lens at eye level, the tiger sharp and the background slightly soft."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "Look at the tail: bright white with black rings, like a lemur's. A tiger's tail is orange like its body, with dark rings and a black tip.",
+            "x": 0.86,
+            "y": 0.33
           }
         },
         {
@@ -422,9 +422,9 @@
             "prompt": "Food photograph of a whole Neapolitan pizza margherita seen from directly above, sitting on a round wooden board. The crust has a puffy, uneven rim with dark blistered char spots from a wood-fired oven. Bright red tomato sauce is spread unevenly, with five irregular pools of melted white fresh mozzarella and scattered whole fresh basil leaves, some slightly wilted from the heat. A dark granite countertop is visible at the top corners. Warm indoor light with a little flash glare, slightly saturated colours like a casual home photo."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "The crust is built from separate slabs that overlap like roof tiles, with hard seams between them. A real crust is one ring of dough that puffs and chars unevenly but never breaks into pieces.",
+            "x": 0.81,
+            "y": 0.14
           }
         },
         {
@@ -446,9 +446,9 @@
             "prompt": "Landscape photograph of a tall orange sand dune in a desert under a pale blue sky with thin wispy white clouds. The dune's sharp curving crest runs from the lower left up to the centre of the frame, with one side in soft shadow and the sunlit side covered in fine, regular wind ripples that fill the foreground. Flatter dunes and a hazy horizon stretch away to the right. Warm low late-afternoon light, wide-angle lens, deep focus, natural muted colours."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "A hard one. Follow the ripples on the sunny slope: they stop along an oddly straight line, and past it the sand is smooth as plaster. Wind ripples fade out gradually where the slope changes.",
+            "x": 0.8,
+            "y": 0.75
           }
         },
         {
@@ -470,9 +470,9 @@
             "prompt": "Photograph taken from directly above of an espresso in a white porcelain cup on a black saucer, resting on a weathered light wooden table with visible grain and cracks. The espresso has a smooth golden-brown crema. A small metal spoon lies on the saucer on the right, next to two individually wrapped sugar sachets and a wrapped chocolate, orange and yellow, with small printed brand text. Natural daylight from a window, soft shadows, casual cafe snapshot."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "Try reading the sweet's wrapper. It's letter-shaped gibberish that runs in several directions at once. Real packaging always has a brand you can read.",
+            "x": 0.73,
+            "y": 0.7
           }
         },
         {
@@ -494,9 +494,9 @@
             "prompt": "Landscape photograph of an empty two-lane asphalt road with white edge lines winding down a hillside in Finnish Lapland in autumn. A metal guardrail runs along the right side as the road curves left into the distance. Low birch forest covers the rolling hills in bright yellow, orange and rust-coloured leaves. A calm blue-grey river winds through the valley in the middle of the frame, with rounded fells behind. Heavy grey overcast sky. Shot from the road surface at eye level, wide angle, sharp throughout."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "Where the road bends, the guardrail doubles. A second rail peels away behind the first and runs off into the trees, guarding nothing. The road also has no centre line.",
+            "x": 0.36,
+            "y": 0.69
           }
         }
       ]
@@ -523,8 +523,8 @@
             "prompt": "Macro photograph of a honeybee foraging inside an open pale pink and white quince blossom in spring. The bee sits in the centre of the five rounded petals among yellow stamens, its fuzzy golden-brown thorax and striped abdomen sharply in focus, translucent wings folded back. To the right are tight pink flower buds on a short branch, surrounded by fresh, broad green leaves. The background is a soft dark green blur with a hint of pink blossom in the top corner. Natural daylight, shallow depth of field."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
+            "text": "The bee has a single antenna, and its wings look like crumpled cling film. Real bee wings have a neat, fixed pattern of veins, the same on both sides.",
+            "x": 0.47,
             "y": 0.5
           }
         },
@@ -547,9 +547,9 @@
             "prompt": "Close-up photograph of a heap of large, glossy, ripe red strawberries with green leafy tops piled in a cut-glass crystal bowl. The bowl stands on a white plastic serving tray printed with a pale floral pattern in green and pink. Seen from slightly above at a three-quarter angle, the strawberries fill most of the frame, with visible seeds and small highlights from daylight. A casual home snapshot with natural window light and a slightly cluttered patterned tablecloth at the top edge."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "Look through the cut-glass bowl. The flowery cloth behind it shows through almost undistorted, when thick faceted glass would bend and break it up. Every berry is also the same flawless red, with no pale shoulders.",
+            "x": 0.16,
+            "y": 0.58
           }
         },
         {
@@ -571,9 +571,9 @@
             "prompt": "Winter photograph of a small dark green wooden cabin with a low gable roof heavily covered in snow, standing in a bare winter forest. Long icicles hang from the roof edge over a small screened porch on the right side. Three small windows face the front. Deep, smooth snow fills the foreground with a few footprints, and thin grey tree trunks crowd the background. Light snow is falling, visible as small specks against the dark porch. Flat, cold overcast light, muted colours."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "The icicles hang only from the porch roof, packed like the teeth of a comb and almost all the same length. The main roof, under the same snow, has none at all.",
+            "x": 0.73,
+            "y": 0.72
           }
         },
         {
@@ -595,9 +595,9 @@
             "prompt": "Photograph of a 1960s Danish record player with a teak wooden base and silver-grey top plate, set outdoors on a weathered wooden table, seen from the front at table height. A pale ribbed rubber platter mat, a slim chrome tonearm on the right and a raised clear smoked plastic dust cover reflecting tall pine trees and blue sky with clouds. A wooden fence, a building and pine trees fill the background. Bright natural daylight, sharp detail."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "This turntable couldn't play anything. The platter has no centre spindle to hold a record, and the stubby tonearm is far too short to reach the grooves.",
+            "x": 0.4,
+            "y": 0.54
           }
         },
         {
@@ -619,9 +619,9 @@
             "prompt": "Night landscape photograph of the Milky Way arching across a starry sky above a mountain lake in Snowdonia, Wales. Dark rugged mountains rise on both sides, with a warm orange glow of distant town light on the horizon between them. A lone bare tree and a small stone boathouse with a slate roof stand on the near shore. The still lake reflects the glow and the tree. Large rocks and a small conifer in the dark foreground. Long exposure, wide-angle lens, fine grain, thousands of sharp stars."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "Compare the tree with its reflection. The branches in the water are a different tree, and the hut's reflection is a flat box with no sloped roof. A mirror-still lake copies shapes exactly.",
+            "x": 0.41,
+            "y": 0.8
           }
         }
       ]
@@ -648,9 +648,9 @@
             "prompt": "Underwater photograph of a single moon jellyfish drifting in deep teal-green sea water. Its translucent, saucer-shaped bell glows pale blue and violet, tilted to show the four horseshoe-shaped gonads in the centre, with a fringe of fine short tentacles around the edge and frilly oral arms folded underneath. The water fades from lighter green at the top to darker blue-green at the bottom with tiny floating particles. Lit by a soft underwater flash, the jellyfish is sharp against the soft background."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "The four rings in the centre are joined into one glowing flower outline, like a neon sign. On a real moon jelly they're four separate soft, milky horseshoes.",
+            "x": 0.45,
+            "y": 0.52
           }
         },
         {
@@ -672,9 +672,9 @@
             "prompt": "Casual overhead photograph of a cheeseburger and a large pile of skin-on fries on a crumpled sheet of brown paper in a metal tray on a restaurant table. The burger has a shiny brown brioche bun, melted cheese, a thick beef patty, fresh rocket and green salad leaves and crispy fried onion strings on top. The fries are long, uneven and golden with dark crispy ends. A paper menu is partly visible at the top left. Warm restaurant lighting, slightly underexposed phone snapshot."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "Follow the long fry on the left edge of the pile. It runs straight down, then bends at a sharp elbow into a second fry, as if two were welded together. Real fries are separate sticks.",
+            "x": 0.55,
+            "y": 0.47
           }
         },
         {
@@ -696,9 +696,9 @@
             "prompt": "Landscape photograph of green rice terraces in Bali, Indonesia, stepping down a steep valley side in curving layers. The terraces are bright fresh green, separated by narrow earthen walls. Tall coconut palms with feathery fronds stand scattered across the slopes and fill the foreground with dense tropical banana plants and bushes. A dark forested ridge closes the top of the frame with no sky visible. Soft, humid, overcast daylight, rich saturated greens, telephoto compression."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "The far terraces are drawn like a contour map: dozens of perfectly even bands with no paths, huts, water or people's work anywhere. Real terraces show channels, puddles and the odd ragged edge.",
+            "x": 0.24,
+            "y": 0.17
           }
         },
         {
@@ -720,9 +720,9 @@
             "prompt": "Photograph of an antique silver pocket watch standing upright on a weathered grey concrete ledge next to a galvanised metal post. The watch has a round brass bow at the top, a white enamel dial with black Roman numerals, thin black hands, a small seconds sub-dial and visible scratches and tarnish on the case. A small rusty bolt sits just behind it on the left. The background on the left is a soft, blurred pale grey. Overcast daylight, shallow depth of field, close-up at ledge height."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "Read the dial. The Roman numerals repeat and run out of order, X sits where IX should be, and there's only one hand. The little seconds dial is numbered in gibberish too.",
+            "x": 0.51,
+            "y": 0.46
           }
         },
         {
@@ -744,9 +744,9 @@
             "prompt": "Landscape photograph of frozen methane bubbles trapped in clear dark ice on Abraham Lake in the Canadian Rockies. The foreground is filled with stacked white, round and oval bubbles suspended at different depths in the glassy grey-green ice, with fine cracks and a few patches of dusting snow. The ice stretches to a dark forested shoreline and jagged snow-covered mountains under a bright, cloudy sky, with the low sun reflecting as a soft glare on the ice at the right. Wide-angle lens, low viewpoint, cold natural colours."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "The bubbles look like stacks of white china plates sitting on the ice. Real frozen methane bubbles are thin, see-through discs trapped inside it, with soft edges.",
+            "x": 0.51,
+            "y": 0.72
           }
         }
       ]
@@ -773,9 +773,9 @@
             "prompt": "Wildlife photograph of an Atlantic puffin standing on a grassy clifftop holding a beakful of shiny silver sand eels hanging from its colourful orange, yellow and blue-grey bill. The bird is in side view facing right, with a black back and wings, a white chest, a pale grey face and bright orange feet on a patch of bare brown earth. Green cushions of sea campion and short grass with a few tiny white flowers fill the scene. Overcast daylight, telephoto lens, sharp detail on feathers and fish."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "The fish hang down from under the beak like a beard, with nothing gripping them. A real puffin clamps its catch crosswise in the bill, so fish stick out on both sides.",
+            "x": 0.64,
+            "y": 0.48
           }
         },
         {
@@ -797,9 +797,9 @@
             "prompt": "Casual photograph of four pale beige French macarons with a caramel filling on a small round cream-coloured plate on a light oak table in a cafe. Three macarons sit flat and one leans on top of the others; their smooth tops and ruffled feet are clearly visible. Behind them, out of focus, are a white bowl, a mug and part of another plate of pastries. Warm indoor light from a window on the right, shallow depth of field, shot at table height."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "The tilted macaron on top is barely touching anything. Its weight sits out past the edge of the one below, so it should slide off. Every shell is also exactly the same size and colour.",
+            "x": 0.66,
+            "y": 0.66
           }
         },
         {
@@ -820,9 +820,9 @@
             "prompt": "Street photograph of a long blue-and-white articulated city tram stopped on a wide, quiet asphalt street on a sunny spring day. The tram has a pale blue lower body, white upper band, large windows, a pantograph on the roof touching overhead wires and a route number 4 sign on its front. Tall trees with fresh light green leaves line the far side of the street, with a low building and a parked red car in the background. Seen from a three-quarter front angle. Clear blue sky, crisp midday light."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "The tram isn't on the tracks. The rails run off to the right while the tram rolls along plain asphalt, and its pantograph doesn't quite meet the overhead wire either.",
+            "x": 0.6,
+            "y": 0.76
           }
         },
         {
@@ -844,9 +844,9 @@
             "prompt": "Close-up nature photograph of a single mature Siberian pine cone hanging on a branch among long, soft green needles in a mountain forest. The egg-shaped cone is purple-brown with thick, overlapping woody scales that have pale grey edges and a slight resin shine. Bunches of five-needle clusters radiate around it in every direction, some in front of the cone. A smaller young reddish cone sits above it at the top of the branch. The background is a soft blur of dark forest. Natural overcast light, shallow depth of field."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "The cone isn't attached to the branch; it hangs in mid-air with a little red cone sprouting from its top instead of a stalk. Its scales are also stacked in neat rows like roof tiles, not the spiral a real pine cone grows in.",
+            "x": 0.48,
+            "y": 0.42
           }
         },
         {
@@ -868,9 +868,9 @@
             "prompt": "Landscape photograph of a large, jagged iceberg floating in a glacial lake in Patagonia. The ice glows an intense translucent turquoise blue, with sharp sculpted peaks and smooth melted hollows, and whiter ice along the top edges. The lake surface in front is calm pale blue-grey. Behind the iceberg rise dark forested hills and snow-dusted mountains, under a blue sky with thin streaks of white cloud. Bright, clear afternoon light, sharp detail in the ice texture."
           },
           "tell": {
-            "text": "Tell pending.",
-            "x": 0.5,
-            "y": 0.5
+            "text": "Look where the ice meets the lake. The berg sits on the surface like a cake on a table, with no wave-worn notch at the waterline and almost no reflection in water that calm.",
+            "x": 0.52,
+            "y": 0.93
           }
         }
       ]
