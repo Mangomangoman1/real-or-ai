@@ -37,7 +37,13 @@ export async function makeAi(item: Src, model = DEFAULT_MODEL) {
     if (!file) throw new Error("no image returned");
     bytes = file.uint8Array;
   } else {
-    const res = await generateImage({ model: gateway.imageModel(model), prompt, aspectRatio: "4:3" });
+    const res = await generateImage({
+      model: gateway.imageModel(model),
+      prompt,
+      aspectRatio: "4:3",
+      // Seedream stamps "AI generated" in the corner by default, which would give the game away.
+      providerOptions: { bytedance: { watermark: false } },
+    });
     bytes = res.image.uint8Array;
   }
   const buf = await normalise(Buffer.from(bytes));
