@@ -1,28 +1,26 @@
 import { NextResponse } from "next/server";
+import { getVercelOidcToken } from "@vercel/oidc";
 import { denied, pipelineEnabled } from "@/lib/pipeline/guard";
 
 export const dynamic = "force-dynamic";
 
+/** Credit balance and the models the gateway offers. */
 export async function GET() {
   if (!pipelineEnabled()) return denied();
-  const out: Record<string, unknown> = {
-    oidc: Boolean(process.env.VERCEL_OIDC_TOKEN),
-    blob: Boolean(process.env.BLOB_READ_WRITE_TOKEN),
-  };
+  const out: Record<string, unknown> = {};
   try {
-    const r = await fetch("https://ai-gateway.vercel.sh/v1/credits", {
-      headers: { Authorization: `Bearer ${process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN}` },
-    });
+    const token = process.env.AI_GATEWAY_API_KEY || (await getVercelOidcToken());
+    const r = await fetch("https://ai-gateway.vercel.sh/v1/credits", { headers: { Authorization: `Bearer ${token}` } });
     out.credits = { status: r.status, body: (await r.text()).slice(0, 300) };
   } catch (e) {
     out.credits = String(e);
   }
   try {
     const r = await fetch("https://ai-gateway.vercel.sh/v1/models");
-    const j = (await r.json()) as { data: { id: string; type?: string; pricing?: unknown }[] };
-    out.imageModels = j.data
-      .filter((m) => m.type === "image" || /image|flux|seedream|imagen/i.test(m.id))
-      .map((m) => ({ id: m.id, type: m.type, pricing: m.pricing }));
+    const j = (await r.json()) as { data: { id: string; type?: string; pricing?: { input?: string; output?: string } }[] };
+    out.vision = j.data
+      .filter((m) => m.type === "language" && /^(anthropic|google\/gemini-3|openai\/gpt-5)/.test(m.id))
+      .map((m) => `${m.id} ${m.pricing?.input ?? ""}/${m.pricing?.output ?? ""}`);
   } catch (e) {
     out.models = String(e);
   }
