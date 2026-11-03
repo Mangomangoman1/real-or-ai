@@ -811,8 +811,9 @@ button.chip:hover { color: var(--ink); border-color: var(--line-2); }
     gap: 14px;
     padding-top: 0;
   }
-  .hand { height: clamp(170px, 27svh, 260px); }
-  .hcard { --w: clamp(88px, 24vw, 130px); border-radius: 13px; bottom: 6%; }
+  .hand { height: clamp(170px, 27svh, 260px); animation-name: float-sm; }
+  /* the fanned cards swing below their box, so lift them clear of the date line */
+  .hcard { --w: clamp(88px, 24vw, 130px); border-radius: 13px; bottom: calc(6% + 30px); }
   .hcard-no { font-size: 16px; left: 10px; top: 8px; }
   .title-copy { gap: 12px; }
   .title-mark .wordmark { font-size: clamp(60px, 19vw, 104px); }
@@ -846,6 +847,7 @@ button.chip:hover { color: var(--ink); border-color: var(--line-2); }
 @media (max-width: 760px) and (max-height: 700px) {
   .rules { display: none; }
   .hand { height: 22svh; }
+  .hcard { --w: clamp(66px, 18vw, 88px); bottom: calc(4% + 26px); }
 }
 
 /* Short, wide windows (landscape phones): keep the photos as big as possible */
@@ -866,6 +868,7 @@ button.chip:hover { color: var(--ink); border-color: var(--line-2); }
 .card:nth-child(2) { --tilt: 2deg; }
 @keyframes deal-hand { from { opacity: 0; transform: rotate(0deg) translateY(60%); } }
 @keyframes float { from { transform: translateY(-4px); } to { transform: translateY(6px); } }
+@keyframes float-sm { from { transform: translateY(-6px); } to { transform: translateY(2px); } }
 @keyframes loupe-in { from { opacity: 0; transform: scale(0.6); } to { opacity: 1; transform: none; } }
 @keyframes flash { 0% { opacity: 0; } 18% { opacity: 0.7; } 100% { opacity: 0; } }
 @keyframes stamp {

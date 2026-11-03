@@ -398,9 +398,9 @@
             "prompt": "Wildlife photograph of a young Bengal tiger walking from right to left through green grass at the edge of a forest. The tiger is seen fully side-on, head slightly turned towards the camera, with a bright orange coat, bold black stripes, white patches on its face and belly, and a long striped tail curling up at the end. Behind it is a dense wall of leafy green bushes and saplings. Soft daylight, natural colours, telephoto lens at eye level, the tiger sharp and the background slightly soft."
           },
           "tell": {
-            "text": "Look at the tail: bright white with black rings, like a lemur's. A tiger's tail is orange like its body, with dark rings and a black tip.",
-            "x": 0.86,
-            "y": 0.33
+            "text": "Follow the tail back to the body. It's white with black rings right from the rump, as if it came off another animal. A real tiger's tail starts out orange like its back and only turns pale near the tip.",
+            "x": 0.81,
+            "y": 0.37
           }
         },
         {
