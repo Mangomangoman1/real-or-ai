@@ -22,5 +22,7 @@ export type Draft = {
   note?: string;
   /** Puzzle number it is scheduled for, once approved */
   day?: number;
+  /** Failed attempts at the current stage */
+  fails?: number;
   updatedAt: string;
 };
