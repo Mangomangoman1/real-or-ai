@@ -6,7 +6,7 @@ import source from "@/data/source.json";
 export type Src = { id: string; thumb1600: string; description: string };
 
 // Ask for an ordinary, unretouched photo. Over-polished AI images are too easy to spot.
-const STYLE =
+export const STYLE =
   " Shot as a real, unedited photograph: natural light, true-to-life colour, realistic depth of field, subtle sensor noise, no watermark, no caption, no border, no people.";
 
 export const DEFAULT_MODEL = "bytedance/seedream-5.0-lite";
@@ -23,9 +23,8 @@ export async function makeReal(item: Src) {
   return { id: item.id, url, bytes: buf.length };
 }
 
-export async function makeAi(item: Src, model = DEFAULT_MODEL) {
-  const prompt = item.description.trim() + STYLE;
-  let bytes: Uint8Array;
+/** Make the AI image for a prompt with any gateway image model. Returns raw bytes. */
+export async function twin(prompt: string, model = DEFAULT_MODEL): Promise<Uint8Array> {
   if (model.startsWith("google/gemini")) {
     // Gemini image models answer through the text API with image files.
     const res = await generateText({
@@ -35,19 +34,25 @@ export async function makeAi(item: Src, model = DEFAULT_MODEL) {
     });
     const file = res.files.find((f) => f.mediaType.startsWith("image/"));
     if (!file) throw new Error("no image returned");
-    bytes = file.uint8Array;
-  } else {
-    const res = await generateImage({
-      model: gateway.imageModel(model),
-      prompt,
-      aspectRatio: "4:3",
-      // Seedream stamps "AI generated" in the corner by default, which would give the game away.
-      providerOptions: { bytedance: { watermark: false } },
-    });
-    bytes = res.image.uint8Array;
+    return file.uint8Array;
   }
-  const buf = await normalise(Buffer.from(bytes));
+  if (model.startsWith("openai/")) {
+    const res = await generateImage({ model: gateway.imageModel(model), prompt, size: "1536x1024" });
+    return res.image.uint8Array;
+  }
+  const res = await generateImage({
+    model: gateway.imageModel(model),
+    prompt,
+    aspectRatio: "4:3",
+    // Seedream stamps "AI generated" in the corner by default, which would give the game away.
+    providerOptions: { bytedance: { watermark: false } },
+  });
+  return res.image.uint8Array;
+}
+
+export async function makeAi(item: Src, model = DEFAULT_MODEL, kind = "ai2") {
+  const buf = await normalise(Buffer.from(await twin(item.description.trim() + STYLE, model)));
   // "ai2": the first batch carried a watermark, and a new name dodges year-long CDN caching of the old files.
-  const url = await store(item.id, "ai2", buf);
+  const url = await store(item.id, kind, buf);
   return { id: item.id, model, url, bytes: buf.length };
 }
