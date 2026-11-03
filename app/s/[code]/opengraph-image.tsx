@@ -19,7 +19,7 @@ export default async function Image({ params }: { params: Promise<{ code: string
           <div style={{ fontFamily: "Mono", fontSize: 24, color: INK3, letterSpacing: "0.1em" }}>{`NO. ${String(s.no).padStart(3, "0")}`}</div>
         </div>
         <div style={{ display: "flex", alignItems: "flex-end", gap: 34 }}>
-          <div style={{ fontFamily: "Display", fontWeight: 800, fontSize: 250, lineHeight: 0.8, color: CREAM, letterSpacing: "-0.06em" }}>{s.score}</div>
+          <div style={{ fontFamily: "Display", fontWeight: 800, fontSize: 250, lineHeight: 0.8, color: CREAM, letterSpacing: "-0.06em", display: "flex" }}>{String(s.score)}</div>
           <div style={{ display: "flex", flexDirection: "column", gap: 6, paddingBottom: 12 }}>
             <div style={{ fontFamily: "Mono", fontSize: 26, color: INK3, letterSpacing: "0.08em" }}>{`OF ${s.picks.length} SPOTTED`}</div>
             <div style={{ fontFamily: "Display", fontWeight: 800, fontSize: 76, color: tone, letterSpacing: "-0.04em", lineHeight: 1 }}>{RANK[s.score] ?? ""}</div>

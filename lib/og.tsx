@@ -49,7 +49,7 @@ export function Wordmark({ size = 64, color = CREAM }: { size?: number; color?: 
       <span>slopp</span>
       <span style={{ position: "relative", display: "flex" }}>
         ı
-        <span style={{ position: "absolute", left: "50%", top: size * 0.06, width: size * 0.19, height: size * 0.19, marginLeft: -size * 0.095, borderRadius: 999, background: RED }} />
+        <span style={{ position: "absolute", left: "50%", top: size * 0.1, width: size * 0.175, height: size * 0.175, marginLeft: -size * 0.0875, borderRadius: 999, background: RED }} />
       </span>
       <span>ty</span>
     </div>

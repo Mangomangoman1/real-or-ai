@@ -25,7 +25,8 @@ export default async function Image() {
             <Wordmark size={138} />
             <div style={{ display: "flex", alignItems: "center", gap: 14, fontFamily: "Display", fontWeight: 600, fontSize: 44, color: INK2, letterSpacing: "-0.02em" }}>
               Real or
-              <span style={{ fontFamily: "Mono", fontWeight: 700, color: RED, border: `4px solid ${RED}`, borderRadius: 10, padding: "0 10px", fontSize: 38, transform: "rotate(-3deg)" }}>AI</span>?
+              <span style={{ fontFamily: "Mono", fontWeight: 700, color: RED, border: `4px solid ${RED}`, borderRadius: 10, padding: "0 10px", fontSize: 38, transform: "rotate(-3deg)" }}>AI</span>
+              <span style={{ marginLeft: -8 }}>?</span>
             </div>
           </div>
           <div style={{ fontSize: 28, color: CREAM, lineHeight: 1.3 }}>Five pairs a day. One photo in each is real. Spot the slop.</div>
