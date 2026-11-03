@@ -1,18 +1,17 @@
 import { NextResponse } from "next/server";
 import { sql, statsEnabled } from "@/lib/db";
-import { DAYS, dayFor, puzzleNoFor } from "@/lib/puzzles";
+import { dayFor, puzzleNoFor } from "@/lib/puzzles";
 
 export const dynamic = "force-dynamic";
 
 const DEVICE = /^[a-z0-9-]{16,40}$/i;
-const ROUND_IDS = new Set(DAYS.flatMap((d) => d.rounds.map((r) => r.id)));
 
 /** How everyone did on one puzzle: ?no=12 */
 export async function GET(req: Request) {
   if (!statsEnabled) return NextResponse.json({ enabled: false });
   const no = Number(new URL(req.url).searchParams.get("no"));
   if (!Number.isInteger(no) || no < 1) return NextResponse.json({ error: "bad no" }, { status: 400 });
-  const ids = dayFor(no).rounds.map((r) => r.id);
+  const ids = (await dayFor(no)).rounds.map((r) => r.id);
   const { q, ready } = sql();
   await ready;
   const [rounds, scores] = await Promise.all([
@@ -53,7 +52,7 @@ export async function POST(req: Request) {
   const { q, ready } = sql();
   await ready;
   if (typeof roundId === "string" && typeof hit === "boolean") {
-    if (!ROUND_IDS.has(roundId) || !dayFor(no!).rounds.some((r) => r.id === roundId)) {
+    if (!(await dayFor(no!)).rounds.some((r) => r.id === roundId)) {
       return NextResponse.json({ error: "bad round" }, { status: 400 });
     }
     await q`INSERT INTO guesses (device, round_id, puzzle_no, hit) VALUES (${device}, ${roundId}, ${no}, ${hit}) ON CONFLICT DO NOTHING`;

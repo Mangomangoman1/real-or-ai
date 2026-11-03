@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { DAYS } from "@/lib/puzzles";
+import { BASE_DAYS as DAYS } from "@/lib/puzzles";
 import { BG, CREAM, fonts, INK2, INK3, OG_SIZE, photo, RED, Wordmark } from "@/lib/og";
 
 export const alt = "Sloppity: real or AI? Two photos, one is AI slop. Spot it.";

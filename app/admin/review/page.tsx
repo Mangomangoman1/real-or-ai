@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { pipelineEnabled } from "@/lib/pipeline/guard";
-import { DAYS } from "@/lib/puzzles";
+import { allDays } from "@/lib/puzzles";
 
 export const dynamic = "force-dynamic";
 
@@ -8,6 +8,7 @@ export const dynamic = "force-dynamic";
 export default async function Review({ searchParams }: { searchParams: Promise<{ day?: string; grid?: string }> }) {
   if (!pipelineEnabled()) notFound();
   const sp = await searchParams;
+  const DAYS = await allDays();
   const days = sp.day ? DAYS.filter((d) => String(d.no) === sp.day) : DAYS;
   const grid = sp.grid === "1";
   return (

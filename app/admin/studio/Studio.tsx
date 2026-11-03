@@ -11,6 +11,7 @@ export default function Studio() {
   const [tab, setTab] = useState<Status | "all">("drafted");
   const [running, setRunning] = useState(false);
   const [log, setLog] = useState<string[]>([]);
+  const [grid, setGrid] = useState(false);
   const runRef = useRef(false);
 
   const refresh = useCallback(async () => {
@@ -63,7 +64,7 @@ export default function Studio() {
   const shown = drafts.filter((d) => tab === "all" || d.status === tab);
 
   return (
-    <main className="studio">
+    <main className={`studio${grid ? " grid" : ""}`}>
       <header>
         <b>Studio</b>
         {TABS.map((t) => (
@@ -76,11 +77,14 @@ export default function Studio() {
         </span>
         <button onClick={run} className="run">{running ? "Stop" : "Run pipeline"}</button>
         <button onClick={refresh}>Refresh</button>
+        <button onClick={() => setGrid((g) => !g)} className={grid ? "on" : ""}>Grid</button>
       </header>
       {log.length > 0 && <pre className="log">{log.slice(0, 8).join("\n")}</pre>}
-      {shown.map((d) => (
-        <Card key={d.id} d={d} edit={edit} />
-      ))}
+      <div className="list">
+        {shown.map((d) => (
+          <Card key={d.id} d={d} edit={edit} />
+        ))}
+      </div>
     </main>
   );
 }

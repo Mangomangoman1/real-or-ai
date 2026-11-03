@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ code: str
 }
 
 export default async function SharedPage({ params }: { params: Promise<{ code: string }> }) {
-  const { launch, days, total } = available();
+  const { launch, days, total } = await available();
   const s = parseShare((await params).code);
   return <Game launch={launch} days={days} total={total} challenge={s ? { no: s.no, score: s.score, of: s.picks.length } : undefined} />;
 }

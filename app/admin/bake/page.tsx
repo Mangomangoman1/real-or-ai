@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { pipelineEnabled } from "@/lib/pipeline/guard";
 import { opaqueName } from "@/lib/pipeline/media";
-import { DAYS } from "@/lib/puzzles";
+import { BASE_DAYS as DAYS } from "@/lib/puzzles";
 
 export const dynamic = "force-dynamic";
 
