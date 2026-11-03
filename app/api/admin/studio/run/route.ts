@@ -39,6 +39,11 @@ export async function GET(req: Request) {
           if (next.status === from) break;
           d = next;
         } catch (e) {
+          // Being rate-limited isn't the draft's fault: leave it for the next run.
+          if (/\b429\b/.test(String(e))) {
+            errors.push(`${d.id} ${from}: rate-limited`);
+            break;
+          }
           const fails = (d.fails ?? 0) + 1;
           errors.push(`${d.id} ${from}: ${String(e).slice(0, 160)}`);
           await save({ ...d, fails, status: fails >= MAX_FAILS ? "rejected" : d.status, note: fails >= MAX_FAILS ? `failed ${fails}x: ${String(e).slice(0, 120)}` : d.note });

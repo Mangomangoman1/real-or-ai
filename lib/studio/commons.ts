@@ -12,6 +12,29 @@ type Page = {
   imageinfo?: { thumburl: string; width: number; height: number; descriptionurl: string; extmetadata?: Record<string, { value: string }> }[];
 };
 
+/**
+ * Wikimedia rate-limits bursts, so calls go out two at a time and a 429 waits and retries
+ * (honouring Retry-After) instead of failing the draft.
+ */
+let active = 0;
+const waiting: (() => void)[] = [];
+async function politely(url: string | URL, init?: RequestInit) {
+  if (active >= 2) await new Promise<void>((r) => waiting.push(r));
+  active++;
+  try {
+    for (let i = 0; ; i++) {
+      const r = await fetch(url, { ...init, headers: { "User-Agent": UA } });
+      if (r.status !== 429 && r.status !== 503) return r;
+      if (i >= 4) return r;
+      const after = Number(r.headers.get("retry-after")) || 2 ** i * 2;
+      await new Promise((res) => setTimeout(res, Math.min(after, 20) * 1000));
+    }
+  } finally {
+    active--;
+    waiting.shift()?.();
+  }
+}
+
 const strip = (h = "") => h.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
 
 /**
@@ -33,7 +56,7 @@ export async function candidates(query: string, limit = 12): Promise<Photo[]> {
     iiextmetadatafilter: "LicenseShortName|LicenseUrl|Artist",
     iiurlwidth: "1920",
   }).forEach(([k, v]) => u.searchParams.set(k, v));
-  const r = await fetch(u, { headers: { "User-Agent": UA }, cache: "no-store" });
+  const r = await politely(u, { cache: "no-store" });
   if (!r.ok) throw new Error(`commons ${r.status}`);
   const j = (await r.json()) as { query?: { pages?: Page[] } };
   const pages = (j.query?.pages ?? []).sort((a, b) => (a.index ?? 0) - (b.index ?? 0));
@@ -68,7 +91,7 @@ export function sized(thumb: string, w: number) {
 }
 
 export async function bytes(url: string) {
-  const r = await fetch(url, { headers: { "User-Agent": UA } });
+  const r = await politely(url);
   if (!r.ok) throw new Error(`fetch ${r.status} ${url}`);
   return new Uint8Array(await r.arrayBuffer());
 }
