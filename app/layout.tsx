@@ -5,18 +5,20 @@ import "@fontsource/instrument-serif/400.css";
 import "@fontsource/instrument-serif/400-italic.css";
 import "@fontsource-variable/inter-tight";
 import "@fontsource-variable/jetbrains-mono";
+import "@fontsource-variable/bricolage-grotesque/standard.css";
 import "./globals.css";
 
-const description = "Five pairs a day. In each, one photo is real and its twin was made by AI. Can you spot the fake?";
+const description = "A daily game: five pairs of photos, one real and one AI in each. Can you spot the slop?";
+const title = "Sloppity · real or AI?";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
-  title: { default: "Real or AI · a daily eye test", template: "%s · Real or AI" },
+  title: { default: title, template: "%s · Sloppity" },
   description,
-  applicationName: "Real or AI",
-  openGraph: { type: "website", siteName: "Real or AI", title: "Real or AI · a daily eye test", description, url: "/" },
-  twitter: { card: "summary_large_image", title: "Real or AI · a daily eye test", description },
-  appleWebApp: { title: "Real or AI", statusBarStyle: "default" },
+  applicationName: "Sloppity",
+  openGraph: { type: "website", siteName: "Sloppity", title, description, url: "/" },
+  twitter: { card: "summary_large_image", title, description },
+  appleWebApp: { title: "Sloppity", statusBarStyle: "black-translucent" },
   formatDetection: { telephone: false },
   robots: process.env.VERCEL_ENV === "production" ? { index: true, follow: true } : { index: false, follow: false },
 };
@@ -26,8 +28,8 @@ export const viewport: Viewport = {
   initialScale: 1,
   viewportFit: "cover",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f2eee5" },
-    { media: "(prefers-color-scheme: dark)", color: "#0e0d0c" },
+    { media: "(prefers-color-scheme: light)", color: "#efe9dd" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b0a09" },
   ],
 };
 

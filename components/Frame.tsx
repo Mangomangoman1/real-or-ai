@@ -16,12 +16,14 @@ type Props = {
   verdict?: { isAi: boolean; model?: string; credit?: Credit; tell?: { x: number; y: number }; dim?: boolean };
   showHint: boolean;
   placeholder?: { subject: string; isAi: boolean };
+  /** Confetti from the stamp: you caught this one */
+  burst?: boolean;
 };
 
 const HOLD_MS = 200;
 const ZOOM = 2.8;
 
-export default function Frame({ label, src, alt, selected, locked, ready, onLoad, onPick, verdict, showHint, placeholder }: Props) {
+export default function Frame({ label, src, alt, selected, locked, ready, onLoad, onPick, verdict, showHint, placeholder, burst }: Props) {
   const photoRef = useRef<HTMLDivElement>(null);
   const timer = useRef<number | null>(null);
   const start = useRef<{ x: number; y: number } | null>(null);
@@ -100,8 +102,17 @@ export default function Frame({ label, src, alt, selected, locked, ready, onLoad
     start.current = null;
   }
 
-  const classes = ["frame", selected && "selected", locked && "locked", verdict?.dim && "dim"].filter(Boolean).join(" ");
   const tell = verdict?.isAi && verdict.tell;
+  const classes = [
+    "card",
+    selected && "selected",
+    locked && "locked",
+    verdict && (verdict.isAi ? "is-ai" : "is-real"),
+    verdict?.dim && "dim",
+    verdict && !verdict.isAi && selected && "wrong",
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <div
@@ -109,7 +120,7 @@ export default function Frame({ label, src, alt, selected, locked, ready, onLoad
       role="button"
       tabIndex={locked ? -1 : 0}
       aria-pressed={selected}
-      aria-label={`Photo ${label}${selected ? ", chosen as AI" : ""}`}
+      aria-label={`Photo ${label}${selected ? ", your pick for AI" : ""}${verdict ? (verdict.isAi ? ", this was AI" : ", this was real") : ""}`}
       onKeyDown={(e) => {
         if (!locked && (e.key === "Enter" || e.key === " ")) {
           e.preventDefault();
@@ -118,19 +129,6 @@ export default function Frame({ label, src, alt, selected, locked, ready, onLoad
       }}
       onContextMenu={(e) => e.preventDefault()}
     >
-      <span className="tag" aria-hidden>
-        {label}
-      </span>
-      {showHint && !locked && (
-        <span className="hold-hint" aria-hidden>
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
-            <circle cx="11" cy="11" r="7" />
-            <path d="M20 20l-3.5-3.5" />
-          </svg>
-          hold to look closer
-        </span>
-      )}
-
       <div
         ref={photoRef}
         className={["photo", ready && "ready", tell && "spotlight"].filter(Boolean).join(" ")}
@@ -185,6 +183,23 @@ export default function Frame({ label, src, alt, selected, locked, ready, onLoad
           </div>
         )}
 
+        {verdict && <div className="flash" aria-hidden />}
+
+        <span className="badge" aria-hidden>
+          {label}
+        </span>
+        {selected && (
+          <span className="pick-flag" aria-hidden>
+            your pick
+          </span>
+        )}
+        {showHint && !locked && !selected && (
+          <span className="hold-hint" aria-hidden>
+            {LOUPE_ICON}
+            hold to zoom
+          </span>
+        )}
+
         {loupe && !placeholder && (
           <div
             className="loupe"
@@ -193,7 +208,7 @@ export default function Frame({ label, src, alt, selected, locked, ready, onLoad
               top: loupe.y,
               backgroundImage: `url("${shown}")`,
               backgroundSize: `${loupe.w * ZOOM}px ${loupe.h * ZOOM}px`,
-              backgroundPosition: `${-(loupe.x * ZOOM - (loupeSize() / 2))}px ${-(loupe.y * ZOOM - (loupeSize() / 2))}px`,
+              backgroundPosition: `${-(loupe.x * ZOOM - loupeSize() / 2)}px ${-(loupe.y * ZOOM - loupeSize() / 2)}px`,
             }}
           />
         )}
@@ -204,44 +219,68 @@ export default function Frame({ label, src, alt, selected, locked, ready, onLoad
           <div className={`stamp ${verdict.isAi ? "ai" : "real"} ${stampCorner(tell || undefined)}`}>
             {verdict.isAi ? "AI" : "Real"}
             <small>{verdict.isAi ? "machine-made" : "photograph"}</small>
+            {burst && <Burst />}
           </div>
         )}
-      </div>
 
-      <div className="frame-foot">
-        {verdict?.credit ? (
-          <span>
-            <a href={verdict.credit.sourceUrl} target="_blank" rel="noreferrer">
-              {verdict.credit.author}
-            </a>{" "}
-            ·{" "}
-            {verdict.credit.licenseUrl ? (
-              <a href={verdict.credit.licenseUrl} target="_blank" rel="noreferrer">
-                {verdict.credit.license}
-              </a>
-            ) : (
-              verdict.credit.license
-            )}
-          </span>
-        ) : verdict?.isAi ? (
-          <span>Made by {verdict.model}</span>
-        ) : (
-          <span>{selected ? "your pick" : " "}</span>
+        {verdict && (
+          <div className="caption">
+            {verdict.credit ? (
+              <span>
+                Photo{" "}
+                <a href={verdict.credit.sourceUrl} target="_blank" rel="noreferrer" onPointerDown={(e) => e.stopPropagation()} onPointerUp={(e) => e.stopPropagation()}>
+                  {verdict.credit.author}
+                </a>
+                {" · "}
+                {verdict.credit.licenseUrl ? (
+                  <a href={verdict.credit.licenseUrl} target="_blank" rel="noreferrer" onPointerDown={(e) => e.stopPropagation()} onPointerUp={(e) => e.stopPropagation()}>
+                    {verdict.credit.license}
+                  </a>
+                ) : (
+                  verdict.credit.license
+                )}
+              </span>
+            ) : verdict.isAi ? (
+              <span>Made by {verdict.model}</span>
+            ) : null}
+          </div>
         )}
-        <span>{label === "A" ? "01" : "02"}</span>
       </div>
     </div>
   );
 }
 
+const LOUPE_ICON = (
+  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round">
+    <circle cx="11" cy="11" r="7" />
+    <path d="M20 20l-3.5-3.5" />
+  </svg>
+);
+
+/** A little burst of confetti out of the stamp when you catch the fake. */
+function Burst() {
+  const bits = Array.from({ length: 14 }, (_, i) => {
+    const a = (i / 14) * Math.PI * 2 + (i % 2) * 0.3;
+    const d = 60 + ((i * 37) % 50);
+    return { dx: Math.cos(a) * d, dy: Math.sin(a) * d, r: (i * 53) % 360, c: i % 3 };
+  });
+  return (
+    <span className="burst" aria-hidden>
+      {bits.map((b, i) => (
+        <i key={i} className={`c${b.c}`} style={{ "--dx": `${b.dx}px`, "--dy": `${b.dy}px`, "--r": `${b.r}deg` } as React.CSSProperties} />
+      ))}
+    </span>
+  );
+}
+
 /** Put the stamp in the corner farthest from the tell, so it never hides it. */
 function stampCorner(tell?: { x: number; y: number }) {
-  if (!tell) return "at-bl";
+  if (!tell) return "at-br";
   return `at-${tell.y > 0.5 ? "t" : "b"}${tell.x > 0.5 ? "l" : "r"}`;
 }
 
 function loupeSize() {
-  return typeof window !== "undefined" && window.matchMedia("(min-width: 760px)").matches ? 190 : 150;
+  return typeof window !== "undefined" && window.matchMedia("(min-width: 760px)").matches ? 220 : 160;
 }
 
 /** Stand-in for rounds whose photos aren't in yet. */

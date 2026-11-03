@@ -9,11 +9,12 @@ export const revalidate = 3600;
 export async function generateMetadata({ params }: { params: Promise<{ code: string }> }): Promise<Metadata> {
   const s = parseShare((await params).code);
   if (!s) return {};
-  const title = `Real or AI No. ${s.no}: ${s.score}/${s.picks.length} spotted`;
+  const title = `Sloppity No. ${s.no}: ${s.score}/${s.picks.length} spotted`;
   return { title, openGraph: { title, description: "Can you beat it? Five pairs, one fake in each." }, twitter: { title } };
 }
 
-export default function SharedPage() {
+export default async function SharedPage({ params }: { params: Promise<{ code: string }> }) {
   const { launch, days, total } = available();
-  return <Game launch={launch} days={days} total={total} />;
+  const s = parseShare((await params).code);
+  return <Game launch={launch} days={days} total={total} challenge={s ? { no: s.no, score: s.score, of: s.picks.length } : undefined} />;
 }
