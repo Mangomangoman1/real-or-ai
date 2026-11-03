@@ -838,6 +838,8 @@ button.chip:hover { color: var(--ink); border-color: var(--line-2); }
 
   .stats { grid-template-columns: repeat(2, 1fr); }
   .end-actions { flex-direction: column; }
+  .end-actions .btn { flex: none; }
+  .end-actions .btn-play { height: 60px; }
   .end-actions .btn-ghost { height: 52px; }
 }
 
