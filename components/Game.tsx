@@ -2,7 +2,9 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Frame from "./Frame";
-import { aiOnLeft, dateForNo, dayFor, DAYS, msUntilNextPuzzle, puzzleNoFor } from "@/lib/puzzles";
+import { aiOnLeft, dateForNo, msUntilNextPuzzle, pickDay, puzzleNoFor } from "@/lib/calendar";
+import { beat, fetchStats, report, type Stats } from "@/lib/stats";
+import { shareCode } from "@/lib/share";
 import { bestStreak, load, save, streak, type Saved } from "@/lib/store";
 import type { Day, Round } from "@/lib/types";
 
@@ -18,7 +20,9 @@ const LINES: Record<number, string> = {
   0: "A clean sweep, for the robots.",
 };
 
-export default function Game() {
+type Props = { launch: string; days: Day[]; total: number };
+
+export default function Game({ launch, days, total }: Props) {
   const [mounted, setMounted] = useState(false);
   const [saved, setSaved] = useState<Saved>({ results: {} });
   const [todayNo, setTodayNo] = useState(1);
@@ -33,15 +37,18 @@ export default function Game() {
   const [toast, setToast] = useState<string | null>(null);
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const verdictRef = useRef<HTMLDivElement>(null);
+  const [stats, setStats] = useState<Stats | null>(null);
 
-  const day: Day = useMemo(() => dayFor(no), [no]);
+  const dayFor = useCallback((n: number) => pickDay(days, total, n), [days, total]);
+
+  const day: Day = useMemo(() => dayFor(no), [dayFor, no]);
   const round: Round | undefined = day.rounds[idx];
   const left = round ? aiOnLeft(round.id) : true;
 
   // First load: read saved state on the client only.
   useEffect(() => {
     const s = load();
-    const t = puzzleNoFor();
+    const t = puzzleNoFor(launch);
     setSaved(s);
     setTodayNo(t);
     setNo(t);
@@ -54,6 +61,16 @@ export default function Game() {
     }
     setMounted(true);
   }, []);
+
+  // Everyone else's results for the puzzle on screen.
+  useEffect(() => {
+    if (!mounted || phase === "intro") return;
+    let live = true;
+    fetchStats(no).then((s) => live && setStats(s));
+    return () => {
+      live = false;
+    };
+  }, [mounted, no, phase]);
 
   const persist = useCallback((next: Saved) => {
     setSaved(next);
@@ -93,6 +110,7 @@ export default function Game() {
     });
     if (navigator.vibrate) navigator.vibrate(hit ? 12 : [20, 40, 20]);
     void done;
+    void report({ no, roundId: round.id, hit }).then(() => fetchStats(no).then((st) => st && setStats(st)));
     setTimeout(() => verdictRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" }), 450);
   }
 
@@ -103,6 +121,7 @@ export default function Game() {
         results: { ...saved.results, [no]: { picks, done: true, daily: no === todayNo } },
       });
       setPhase("end");
+      void report({ no, score: picks.filter(Boolean).length }).then(() => fetchStats(no).then(setStats));
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
@@ -154,7 +173,7 @@ export default function Game() {
       `Real or AI No. ${no}`,
       `${grid} ${picks.filter(Boolean).length}/${picks.length}`,
       st > 1 ? `🔥 ${st}-day streak` : null,
-      typeof window !== "undefined" ? window.location.origin : "",
+      `${window.location.origin}/s/${shareCode(no, picks)}`,
     ]
       .filter(Boolean)
       .join("\n");
@@ -176,7 +195,7 @@ export default function Game() {
   }
 
   const bothReady = loaded.L && loaded.R;
-  const dateLabel = dateForNo(no).toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric" });
+  const dateLabel = dateForNo(launch, no).toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric" });
   const isPlaceholderDay = day.rounds.some((r) => r.placeholder);
 
   return (
@@ -188,7 +207,7 @@ export default function Game() {
           <span className="w-ai">AI</span>
         </button>
         <div className="top-actions">
-          <button className="icon-btn" onClick={() => setSheet("week")} aria-label="Play another day">
+          <button className="icon-btn" onClick={() => setSheet("week")} aria-label="Archive of past puzzles">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
               <rect x="3.5" y="5" width="17" height="15" rx="2.5" />
               <path d="M3.5 10h17M8 3v4M16 3v4" />
@@ -280,6 +299,7 @@ export default function Game() {
                 <h3 className={picks[idx] ? "hit" : "miss shake"}>{picks[idx] ? "Spotted it." : "Fooled you."}</h3>
                 <span className="model">AI was {left ? "A" : "B"}</span>
               </div>
+              <Crowd stat={stats?.rounds?.[round.id]} hit={!!picks[idx]} />
               <p className="tell">
                 <b>The tell</b>
                 {round.tell.text}
@@ -300,7 +320,7 @@ export default function Game() {
           )}
         </section>
       ) : phase === "end" ? (
-        <End no={no} day={day} picks={picks} saved={saved} todayNo={todayNo} onShare={share} onWeek={() => setSheet("week")} />
+        <End no={no} day={day} picks={picks} saved={saved} todayNo={todayNo} stats={stats} onShare={share} onWeek={() => setSheet("week")} />
       ) : null}
 
       {sheet && (
@@ -313,7 +333,7 @@ export default function Game() {
                 <path d="M6 6l12 12M18 6L6 18" />
               </svg>
             </button>
-            {sheet === "week" ? <Week saved={saved} todayNo={todayNo} onPick={startDay} /> : <About />}
+            {sheet === "week" ? <Archive launch={launch} saved={saved} todayNo={todayNo} onPick={startDay} /> : <About days={days} />}
           </div>
         </>
       )}
@@ -379,7 +399,7 @@ function Intro({ no, dateLabel, day, saved, todayNo, onStart, onWeek, placeholde
         <div className="intro-meta">
           <span>{st > 0 ? `🔥 ${st}-day streak` : "New puzzle every midnight"}</span>
           <button className="linkish" onClick={onWeek}>
-            Play the week
+            Archive
           </button>
         </div>
         {placeholder && <div className="banner">Prototype: some photos here are still placeholders.</div>}
@@ -388,7 +408,7 @@ function Intro({ no, dateLabel, day, saved, todayNo, onStart, onWeek, placeholde
   );
 }
 
-function End({ no, day, picks, saved, todayNo, onShare, onWeek }: { no: number; day: Day; picks: boolean[]; saved: Saved; todayNo: number; onShare: () => void; onWeek: () => void }) {
+function End({ no, day, picks, saved, todayNo, stats, onShare, onWeek }: { no: number; day: Day; picks: boolean[]; saved: Saved; todayNo: number; stats: Stats | null; onShare: () => void; onWeek: () => void }) {
   const score = picks.filter(Boolean).length;
   const [left, setLeft] = useState(msUntilNextPuzzle());
   useEffect(() => {
@@ -423,7 +443,7 @@ function End({ no, day, picks, saved, todayNo, onShare, onWeek }: { no: number; 
           Share score
         </button>
         <button className="btn btn-ghost" onClick={onWeek}>
-          Play the week
+          Past puzzles
         </button>
       </div>
 
@@ -445,6 +465,8 @@ function End({ no, day, picks, saved, todayNo, onShare, onWeek }: { no: number; 
           <span>best</span>
         </div>
       </div>
+
+      {stats?.scores && <Spread scores={stats.scores} mine={score} />}
 
       <ul className="recap">
         {day.rounds.map((r, i) => (
@@ -471,23 +493,81 @@ function End({ no, day, picks, saved, todayNo, onShare, onWeek }: { no: number; 
   );
 }
 
-function Week({ saved, todayNo, onPick }: { saved: Saved; todayNo: number; onPick: (n: number) => void }) {
-  // Show the week that today falls in, starting from No. 1 of this loop.
-  const base = Math.floor((todayNo - 1) / DAYS.length) * DAYS.length + 1;
-  const nos = Array.from({ length: DAYS.length }, (_, i) => base + i);
+/** One line under the verdict: how the crowd did on this pair. */
+function Crowd({ stat, hit }: { stat?: { plays: number; hits: number }; hit: boolean }) {
+  if (!stat || stat.plays < 5) return null;
+  const pct = Math.round((stat.hits / stat.plays) * 100);
+  const line =
+    pct >= 75 ? "Most players caught this one." : pct <= 35 ? (hit ? "Few players caught this one. Nice eye." : "This one fools most people.") : "This one splits the crowd.";
+  return (
+    <div className="crowd" aria-live="polite">
+      <div className="crowd-bar" aria-hidden>
+        <span style={{ width: `${pct}%` }} />
+      </div>
+      <p>
+        <b>{pct}%</b> of players spotted it. {line}
+      </p>
+    </div>
+  );
+}
+
+/** How today's scores spread across everyone, with yours marked. */
+function Spread({ scores, mine }: { scores: number[]; mine: number }) {
+  const total = scores.reduce((a, b) => a + b, 0);
+  if (total < 10) return null;
+  const top = Math.max(...scores, 1);
+  const pct = beat(scores, mine);
+  return (
+    <div className="spread">
+      <div className="spread-head">
+        <span>How everyone did</span>
+        <span>{total.toLocaleString()} players</span>
+      </div>
+      <div className="bars" role="img" aria-label={`Score spread. You scored ${mine} of 5${pct !== null ? `, better than ${pct}% of players` : ""}.`}>
+        {scores.map((n, s) => (
+          <div key={s} className={`bar${s === mine ? " mine" : ""}`}>
+            <span className="fill" style={{ height: `${Math.max(4, (n / top) * 100)}%` }} />
+            <span className="lab">{s}</span>
+          </div>
+        ))}
+      </div>
+      {pct !== null && (
+        <p className="spread-line">
+          You did better than <b>{pct}%</b> of players today.
+        </p>
+      )}
+    </div>
+  );
+}
+
+function Archive({ launch, saved, todayNo, onPick }: { launch: string; saved: Saved; todayNo: number; onPick: (n: number) => void }) {
+  // A calendar from No. 1 to today, weeks starting on Monday.
+  const lead = (dateForNo(launch, 1).getDay() + 6) % 7;
+  const nos = Array.from({ length: todayNo }, (_, i) => i + 1);
+  const played = nos.filter((n) => saved.results[n]?.done).length;
   return (
     <>
-      <h4>Play the week</h4>
-      <p>The prototype has seven puzzles. Your streak only counts the day you&rsquo;re on, but you can play any of them.</p>
-      <div className="week">
+      <h4>Archive</h4>
+      <p>
+        Every puzzle so far. Your streak only counts the day you&rsquo;re on, but you can play any of them. {played > 0 && `You've finished ${played} of ${todayNo}.`}
+      </p>
+      <div className="cal">
+        {["M", "T", "W", "T", "F", "S", "S"].map((d, i) => (
+          <span key={i} className="dow">
+            {d}
+          </span>
+        ))}
+        {Array.from({ length: lead }, (_, i) => (
+          <span key={`b${i}`} />
+        ))}
         {nos.map((n) => {
           const r = saved.results[n];
-          const d = dateForNo(n);
+          const d = dateForNo(launch, n);
+          const label = `No. ${n}, ${d.toLocaleDateString(undefined, { month: "long", day: "numeric" })}${r?.done ? `, scored ${r.picks.filter(Boolean).length} of 5` : ""}`;
           return (
-            <button key={n} className={`${n === todayNo ? "today" : ""} ${r?.done ? "done" : ""}`} onClick={() => onPick(n)}>
-              <span className="d">{d.toLocaleDateString(undefined, { weekday: "short" })}</span>
-              <span className="no">{n}</span>
-              <span className="sc">{r?.done ? `${r.picks.filter(Boolean).length}/5` : r?.picks?.length ? "…" : "·"}</span>
+            <button key={n} aria-label={label} className={`${n === todayNo ? "today" : ""} ${r?.done ? "done" : r?.picks?.length ? "part" : ""}`} onClick={() => onPick(n)}>
+              <span className="d">{d.getDate() === 1 || n === 1 ? d.toLocaleDateString(undefined, { month: "short" }) : d.getDate()}</span>
+              <span className="sc">{r?.done ? `${r.picks.filter(Boolean).length}/5` : r?.picks?.length ? "…" : n}</span>
             </button>
           );
         })}
@@ -496,8 +576,8 @@ function Week({ saved, todayNo, onPick }: { saved: Saved; todayNo: number; onPic
   );
 }
 
-function About() {
-  const credits = DAYS.flatMap((d) => d.rounds).filter((r) => !r.placeholder);
+function About({ days }: { days: Day[] }) {
+  const credits = days.flatMap((d) => d.rounds).filter((r) => !r.placeholder);
   return (
     <>
       <h4>How it works</h4>
@@ -506,6 +586,10 @@ function About() {
         make it, so the two share a subject but not a single pixel. Both are cropped and compressed the same way, so file quality gives nothing away.
       </p>
       <p>No faces of real people, ever. Just animals, food, places and things.</p>
+      <p>
+        No account and no tracking cookies. Your scores and streak live in this browser. To show how everyone did, each answer is counted anonymously
+        once per browser.
+      </p>
       <h4 style={{ fontSize: 22, marginTop: 18 }}>Photo credits</h4>
       <ul className="credits-list">
         {credits.map((r) => (

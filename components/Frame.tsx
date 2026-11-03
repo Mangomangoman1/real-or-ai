@@ -27,6 +27,10 @@ export default function Frame({ label, src, alt, selected, locked, ready, onLoad
   const start = useRef<{ x: number; y: number } | null>(null);
   const [loupe, setLoupe] = useState<{ x: number; y: number; w: number; h: number } | null>(null);
   const loupeOn = useRef(false);
+  // A flaky connection gets two quiet retries before the frame says so.
+  const [tries, setTries] = useState(0);
+  const [failed, setFailed] = useState(false);
+  const shown = tries ? `${src}${src.includes("?") ? "&" : "?"}r=${tries}` : src;
 
   // While the loupe is open on a phone, stop the page from scrolling under the finger.
   useEffect(() => {
@@ -144,7 +148,41 @@ export default function Frame({ label, src, alt, selected, locked, ready, onLoad
           <Placeholder subject={placeholder.subject} isAi={placeholder.isAi} onReady={onLoad} />
         ) : (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={src} alt={alt} draggable={false} onLoad={onLoad} onError={onLoad} decoding="async" />
+          <img
+            src={shown}
+            alt={alt}
+            draggable={false}
+            onLoad={() => {
+              setFailed(false);
+              onLoad();
+            }}
+            onError={() => {
+              if (tries < 2) setTimeout(() => setTries((t) => t + 1), 600 * (tries + 1));
+              else {
+                setFailed(true);
+                onLoad();
+              }
+            }}
+            decoding="async"
+          />
+        )}
+
+        {failed && (
+          <div className="img-failed" role="alert">
+            <span>This photo didn&rsquo;t load.</span>
+            <button
+              type="button"
+              onPointerDown={(e) => e.stopPropagation()}
+              onPointerUp={(e) => e.stopPropagation()}
+              onClick={(e) => {
+                e.stopPropagation();
+                setFailed(false);
+                setTries((t) => t + 1);
+              }}
+            >
+              Try again
+            </button>
+          </div>
         )}
 
         {loupe && !placeholder && (
@@ -153,7 +191,7 @@ export default function Frame({ label, src, alt, selected, locked, ready, onLoad
             style={{
               left: loupe.x,
               top: loupe.y,
-              backgroundImage: `url("${src}")`,
+              backgroundImage: `url("${shown}")`,
               backgroundSize: `${loupe.w * ZOOM}px ${loupe.h * ZOOM}px`,
               backgroundPosition: `${-(loupe.x * ZOOM - (loupeSize() / 2))}px ${-(loupe.y * ZOOM - (loupeSize() / 2))}px`,
             }}

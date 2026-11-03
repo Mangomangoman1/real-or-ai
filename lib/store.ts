@@ -52,3 +52,18 @@ export function bestStreak(s: Saved) {
   }
   return best;
 }
+
+/** A random id for this browser, so the global stats count each player once. Nothing personal. */
+export function deviceId() {
+  const k = "real-or-ai:device";
+  try {
+    let id = localStorage.getItem(k);
+    if (!id) {
+      id = crypto.randomUUID();
+      localStorage.setItem(k, id);
+    }
+    return id;
+  } catch {
+    return null;
+  }
+}
