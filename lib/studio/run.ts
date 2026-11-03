@@ -38,7 +38,9 @@ export async function advance(d: Draft, used: Set<string>): Promise<Draft> {
       twin(d.description + STYLE, model),
     ]);
     const aiBuf = await normalise(Buffer.from(aiRaw));
-    const [realSrc, aiSrc] = await Promise.all([store(d.id, "real", realBuf), store(d.id, "ai2", aiBuf)]);
+    // Fresh names each time, so a redone twin or re-picked photo never shows a cached old file.
+    const v = Date.now().toString(36);
+    const [realSrc, aiSrc] = await Promise.all([store(d.id, `real:${v}`, realBuf), store(d.id, `ai:${model}:${v}`, aiBuf)]);
     return save({ ...d, status: "made", realSrc, ai: { model, src: aiSrc } });
   }
   if (d.status === "made" && d.realSrc && d.ai) {
