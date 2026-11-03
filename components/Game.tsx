@@ -142,6 +142,22 @@ export default function Game({ launch, days, total, challenge }: Props) {
     return () => window.removeEventListener("keydown", onKey);
   });
 
+  // Enter or Space starts the puzzle from the title screen.
+  useEffect(() => {
+    if (phase !== "title" || !mounted) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (sheet || e.metaKey || e.ctrlKey || e.altKey) return;
+      const t = (e.target as HTMLElement)?.tagName;
+      if (t === "BUTTON" || t === "A" || t === "INPUT") return;
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        startDay(no);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  });
+
   // Escape closes a sheet.
   useEffect(() => {
     if (!sheet) return;
@@ -431,7 +447,7 @@ function Title({
           Five pairs a day. In each, one photo is real and its twin is AI slop, made from a description of it. <strong>Spot the slop.</strong>
         </p>
         <div className="title-cta">
-          <button className="btn btn-play" onClick={onStart} autoFocus>
+          <button className="btn btn-play" onClick={onStart}>
             {label}
             {Icon.arrow}
           </button>

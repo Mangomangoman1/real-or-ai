@@ -1,8 +1,8 @@
 import { ImageResponse } from "next/og";
 import { DAYS } from "@/lib/puzzles";
-import { fonts, INK, INK3, OG_SIZE, PAPER, photo, RED, Wordmark } from "@/lib/og";
+import { BG, CREAM, fonts, INK2, INK3, OG_SIZE, photo, RED, Wordmark } from "@/lib/og";
 
-export const alt = "Real or AI: a daily eye test. Two photos, one is fake.";
+export const alt = "Sloppity: real or AI? Two photos, one is AI slop. Spot it.";
 export const size = OG_SIZE;
 export const contentType = "image/png";
 // Drawn on first request, then cached, so the build never depends on the network.
@@ -10,26 +10,30 @@ export const revalidate = 86400;
 
 export default async function Image() {
   const r = DAYS[0].rounds[0];
-  // A plain paper card stands in if the photos can't be fetched while building.
+  // Blank frames stand in if the photos can't be fetched while building.
   const [a, b] = await Promise.all([photo(r.real.src), photo(r.ai.src)]).catch(() => [null, null]);
   return new ImageResponse(
     (
-      <div style={{ width: "100%", height: "100%", display: "flex", background: PAPER, padding: "56px 64px", fontFamily: "Sans" }}>
-        <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", width: 470 }}>
-          <Wordmark size={70} />
-          <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-            <div style={{ fontFamily: "Serif", fontSize: 58, lineHeight: 1.02, color: INK }}>One is a photo. One was made by a machine.</div>
-            <div style={{ fontSize: 26, color: INK3, lineHeight: 1.3 }}>Five pairs a day. Can you spot the fake?</div>
-          </div>
-          <div style={{ display: "flex", alignItems: "center", gap: 10, fontFamily: "Mono", fontSize: 20, color: RED, letterSpacing: "0.08em" }}>
+      <div style={{ width: "100%", height: "100%", display: "flex", background: BG, padding: "64px 0 56px 72px", fontFamily: "Sans", position: "relative" }}>
+        <div style={{ position: "absolute", left: 0, top: 0, width: 1200, height: 630, display: "flex", backgroundImage: "radial-gradient(circle at 72% 50%, rgba(255,128,72,0.16), rgba(11,10,9,0) 45%)" }} />
+        <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", width: 540 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 12, fontFamily: "Mono", fontSize: 20, color: INK3, letterSpacing: "0.12em" }}>
             <div style={{ width: 12, height: 12, borderRadius: 99, background: RED }} />
-            NEW PUZZLE EVERY MIDNIGHT
+            A DAILY GAME
           </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            <Wordmark size={138} />
+            <div style={{ display: "flex", alignItems: "center", gap: 14, fontFamily: "Display", fontWeight: 600, fontSize: 44, color: INK2, letterSpacing: "-0.02em" }}>
+              Real or
+              <span style={{ fontFamily: "Mono", fontWeight: 700, color: RED, border: `4px solid ${RED}`, borderRadius: 10, padding: "0 10px", fontSize: 38, transform: "rotate(-3deg)" }}>AI</span>?
+            </div>
+          </div>
+          <div style={{ fontSize: 28, color: CREAM, lineHeight: 1.3 }}>Five pairs a day. One photo in each is real. Spot the slop.</div>
         </div>
-        <div style={{ display: "flex", position: "relative", flex: 1, marginLeft: 30 }}>
+        <div style={{ display: "flex", position: "relative", flex: 1 }}>
           {[
-            [a, "A", -4, 20, 40],
-            [b, "B", 3, 190, 230],
+            [a, "A", -5, 40, 40],
+            [b, "B", 4, 170, 230],
           ].map(([src, label, rot, left, top]) => (
             <div
               key={label as string}
@@ -38,22 +42,20 @@ export default async function Image() {
                 left: left as number,
                 top: top as number,
                 display: "flex",
-                flexDirection: "column",
-                background: "#fff",
-                padding: "12px 12px 34px",
+                borderRadius: 22,
+                overflow: "hidden",
                 transform: `rotate(${rot}deg)`,
-                boxShadow: "0 18px 40px -14px rgba(40,30,10,.45)",
+                boxShadow: "0 30px 60px -20px rgba(0,0,0,.9), 0 0 0 2px rgba(255,255,255,.08)",
               }}
             >
               {src ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={src as string} width={400} height={300} alt="" style={{ objectFit: "cover" }} />
               ) : (
-                <div style={{ width: 400, height: 300, background: "#ebe5d8", display: "flex" }} />
+                <div style={{ width: 400, height: 300, background: "#211e1b", display: "flex" }} />
               )}
-              <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "Mono", fontSize: 18, color: INK3, marginTop: 8 }}>
-                <span>{label as string}</span>
-                <span>real or ai?</span>
+              <div style={{ position: "absolute", left: 16, top: 16, width: 54, height: 54, borderRadius: 99, background: "rgba(12,11,10,.6)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Display", fontWeight: 800, fontSize: 28, color: "#fff" }}>
+                {label as string}
               </div>
             </div>
           ))}

@@ -2,13 +2,13 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Real or AI",
-    short_name: "Real or AI",
-    description: "A daily eye test. Five pairs, one fake in each.",
+    name: "Sloppity",
+    short_name: "Sloppity",
+    description: "Real or AI? A daily game. Five pairs, one AI fake in each.",
     start_url: "/",
     display: "standalone",
-    background_color: "#f2eee5",
-    theme_color: "#f2eee5",
+    background_color: "#0b0a09",
+    theme_color: "#0b0a09",
     icons: [{ src: "/apple-icon", sizes: "180x180", type: "image/png" }],
   };
 }

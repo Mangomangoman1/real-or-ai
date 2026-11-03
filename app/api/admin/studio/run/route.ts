@@ -16,8 +16,10 @@ const MAX_FAILS = 3;
  */
 export async function GET(req: Request) {
   if (!pipelineEnabled()) return denied();
-  const n = Math.min(10, Math.max(1, Number(new URL(req.url).searchParams.get("n")) || 6));
-  const deadline = Date.now() + 230_000;
+  const q = new URL(req.url).searchParams;
+  const n = Math.min(10, Math.max(1, Number(q.get("n")) || 6));
+  // Stop starting new stages after this many seconds, so a caller with a short timeout still gets the summary.
+  const deadline = Date.now() + Math.min(230, Math.max(20, Number(q.get("budget")) || 230)) * 1000;
   const all = await loadAll();
   const used = new Set(all.filter((d) => d.photo).map((d) => d.photo!.title));
   const queue = all.filter((d) => OPEN.has(d.status));

@@ -33,7 +33,7 @@ export function Archive({ launch, saved, todayNo, onPick }: { launch: string; sa
           const label = `No. ${n}, ${d.toLocaleDateString(undefined, { month: "long", day: "numeric" })}${sc !== null ? `, scored ${sc} of 5` : ""}`;
           return (
             <button key={n} aria-label={label} className={`${n === todayNo ? "today" : ""} ${r?.done ? `done s${sc}` : r?.picks?.length ? "part" : ""}`} onClick={() => onPick(n)}>
-              <span className="d">{d.getDate() === 1 || n === 1 ? d.toLocaleDateString(undefined, { month: "short" }) : d.getDate()}</span>
+              <span className="d">{d.getDate() === 1 || n === 1 ? d.toLocaleDateString(undefined, { month: "short", day: "numeric" }) : d.getDate()}</span>
               <span className="sc">{sc !== null ? `${sc}/5` : r?.picks?.length ? "…" : n}</span>
             </button>
           );
